@@ -1,0 +1,22 @@
+.env
+
+__pycache__
+*.pyc
+.pytest_cache
+
+# Coverage files
+.coverage
+coverage.xml
+htmlcov/
+
+# Node.js
+bun.lock
+package.json
+node_modules/
+discord_selfbot.ts
+
+# Python
+*.dat
+
+Summer2025-Internships/
+Summer2025-Internships_Simplify/
