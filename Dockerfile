@@ -16,6 +16,6 @@ COPY requirements.txt .
 
 RUN uv pip install --system -r requirements.txt
 
-COPY mainbot.py .
+COPY . .
 
 CMD ["python", "mainbot.py"] 
