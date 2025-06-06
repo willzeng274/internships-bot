@@ -1611,7 +1611,7 @@
     "is_visible": true
   },
   {
-    "date_updated": 1748453179,
+    "date_updated": 1749001123,
     "url": "https://job-boards.greenhouse.io/mercury/jobs/5463106004",
     "locations": [
       "San Francisco, CA",
@@ -1620,7 +1620,7 @@
       "Remote"
     ],
     "sponsorship": "Other",
-    "active": true,
+    "active": false,
     "company_name": "Mercury",
     "title": "Backend Engineering Intern",
     "season": "Fall",
@@ -1631,7 +1631,7 @@
     "is_visible": true
   },
   {
-    "date_updated": 1748453205,
+    "date_updated": 1749001122,
     "url": "https://job-boards.greenhouse.io/mercury/jobs/5548410004",
     "locations": [
       "San Francisco, CA",
@@ -1640,7 +1640,7 @@
       "Remote"
     ],
     "sponsorship": "Other",
-    "active": true,
+    "active": false,
     "company_name": "Mercury",
     "title": "Full-stack Engineering Intern",
     "season": "Fall",
@@ -1651,7 +1651,7 @@
     "is_visible": true
   },
   {
-    "date_updated": 1748453220,
+    "date_updated": 1749001122,
     "url": "https://job-boards.greenhouse.io/mercury/jobs/5548047004",
     "locations": [
       "San Francisco, CA",
@@ -1660,7 +1660,7 @@
       "Remote"
     ],
     "sponsorship": "Other",
-    "active": true,
+    "active": false,
     "company_name": "Mercury",
     "title": "Frontend Engineering Intern",
     "season": "Fall",
@@ -1790,13 +1790,13 @@
     "is_visible": true
   },
   {
-    "date_updated": 1748577110,
+    "date_updated": 1749001124,
     "url": "https://job-boards.greenhouse.io/rsinternboard/jobs/7855756002?gh_jid=7855756002",
     "locations": [
       "Stennis, MI"
     ],
     "sponsorship": "Other",
-    "active": true,
+    "active": false,
     "company_name": "Relativity Space",
     "title": "Software Engineer Intern",
     "season": "Fall",
@@ -2213,6 +2213,41 @@
     "source": "vanshb03",
     "id": "e199e264-141f-4fe8-a458-fbf5ed911ca7",
     "date_posted": 1748830749,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1748954354,
+    "url": "https://www.splunk.com/en_us/careers/jobs/site-reliability-engineer-intern-33064.html",
+    "locations": [
+      "Remote",
+      "US"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Splunk",
+    "title": "Site Reliability Engineer Intern",
+    "season": "Fall",
+    "source": "vanshb03",
+    "id": "f1c4cb55-457a-41c9-a191-f37945beee88",
+    "date_posted": 1748954354,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1749080297,
+    "url": "https://www.tesla.com/careers/search/job/243842",
+    "locations": [
+      "Palo Alto, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Tesla",
+    "title": "Firmware Engineer Intern, Energy Engineering",
+    "season": "Fall",
+    "source": "vanshb03",
+    "id": "c48b73c6-19da-40db-86c1-774b700280d8",
+    "date_posted": 1749080297,
     "company_url": "",
     "is_visible": true
   }

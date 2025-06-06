@@ -9,7 +9,10 @@ import asyncio
 import shutil
 import tracemalloc
 import resource
-import sqlite3
+import concurrent.futures
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
+from sqlalchemy import Column, Integer, select
+from sqlalchemy.orm import sessionmaker, declarative_base
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -30,6 +33,7 @@ PREVIOUS_DATA_FILE_2 = 'previous_data_simplify.json'
 
 DISCORD_TOKEN = os.getenv("BOT_TOKEN")
 DATABASE_FILE = 'bot_config.db'
+DATABASE_URL = f'sqlite+aiosqlite:///{DATABASE_FILE}'
 MAX_RETRIES = 3
 
 BIG_TECH_COMPANIES = [
@@ -62,93 +66,146 @@ tree = app_commands.CommandTree(client)
 failed_channels = set()
 channel_failure_counts = {}
 
+# --- SQLAlchemy Setup ---
+Base = declarative_base()
+
+class GuildConfig(Base):
+    __tablename__ = 'guild_configs'
+    
+    guild_id = Column(Integer, primary_key=True)
+    channel_id = Column(Integer, nullable=True)
+    ping_role_id = Column(Integer, nullable=True)
+
+# Create async engine and session factory
+engine = create_async_engine(DATABASE_URL, echo=False)
+async_session = sessionmaker(
+    engine, class_=AsyncSession, expire_on_commit=False
+)
+
 # --- Database Setup and Helper Functions ---
-def init_db():
-    conn = sqlite3.connect(DATABASE_FILE)
-    cursor = conn.cursor()
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS channels (
-            channel_id INTEGER PRIMARY KEY
+async def init_db():
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+
+async def set_guild_channel(guild_id: int, channel_id: int | None):
+    async with async_session() as session:
+        # Check if record exists
+        result = await session.execute(
+            select(GuildConfig).where(GuildConfig.guild_id == guild_id)
         )
-    ''')
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS config (
-            key TEXT PRIMARY KEY,
-            value TEXT
+        guild_config = result.scalar_one_or_none()
+        
+        if guild_config:
+            # Update existing record
+            guild_config.channel_id = channel_id
+        else:
+            # Create new record
+            guild_config = GuildConfig(
+                guild_id=guild_id,
+                channel_id=channel_id,
+                ping_role_id=None
+            )
+            session.add(guild_config)
+        
+        await session.commit()
+
+async def get_all_channels_from_db() -> list[tuple[int, int]]:
+    """Returns list of (guild_id, channel_id) tuples for all configured channels"""
+    async with async_session() as session:
+        result = await session.execute(
+            select(GuildConfig.guild_id, GuildConfig.channel_id)
+            .where(GuildConfig.channel_id.is_not(None))
         )
-    ''')
-    # Ensure 'ping_role_id' exists, set to NULL if not present
-    cursor.execute("INSERT OR IGNORE INTO config (key, value) VALUES ('ping_role_id', NULL)")
-    conn.commit()
-    conn.close()
+        return [(row.guild_id, row.channel_id) for row in result]
 
-def add_channel_to_db(channel_id: int):
-    conn = sqlite3.connect(DATABASE_FILE)
-    cursor = conn.cursor()
-    cursor.execute("INSERT OR IGNORE INTO channels (channel_id) VALUES (?)", (channel_id,))
-    conn.commit()
-    conn.close()
+async def get_guild_channel(guild_id: int) -> int | None:
+    """Get the configured channel for a specific guild"""
+    async with async_session() as session:
+        result = await session.execute(
+            select(GuildConfig.channel_id)
+            .where(GuildConfig.guild_id == guild_id)
+        )
+        row = result.first()
+        return row.channel_id if row and row.channel_id else None
 
-def remove_channel_from_db(channel_id: int):
-    conn = sqlite3.connect(DATABASE_FILE)
-    cursor = conn.cursor()
-    cursor.execute("DELETE FROM channels WHERE channel_id = ?", (channel_id,))
-    conn.commit()
-    conn.close()
+async def set_guild_ping_role(guild_id: int, role_id: int | None):
+    async with async_session() as session:
+        # Check if record exists
+        result = await session.execute(
+            select(GuildConfig).where(GuildConfig.guild_id == guild_id)
+        )
+        guild_config = result.scalar_one_or_none()
+        
+        if guild_config:
+            # Update existing record
+            guild_config.ping_role_id = role_id
+        else:
+            # Create new record
+            guild_config = GuildConfig(
+                guild_id=guild_id,
+                channel_id=None,
+                ping_role_id=role_id
+            )
+            session.add(guild_config)
+        
+        await session.commit()
 
-def get_all_channels_from_db() -> list[int]:
-    conn = sqlite3.connect(DATABASE_FILE)
-    cursor = conn.cursor()
-    cursor.execute("SELECT channel_id FROM channels")
-    rows = cursor.fetchall()
-    conn.close()
-    return [row[0] for row in rows]
+async def get_guild_ping_role(guild_id: int) -> int | None:
+    async with async_session() as session:
+        result = await session.execute(
+            select(GuildConfig.ping_role_id)
+            .where(GuildConfig.guild_id == guild_id)
+        )
+        row = result.first()
+        if row and row.ping_role_id:
+            try:
+                return int(row.ping_role_id)
+            except (ValueError, TypeError):
+                print(f"Warning: Invalid ping_role_id '{row.ping_role_id}' for guild {guild_id}. Treating as None.")
+                return None
+        return None
 
-def set_ping_role_in_db(role_id: int | None):
-    conn = sqlite3.connect(DATABASE_FILE)
-    cursor = conn.cursor()
-    if role_id is None:
-        cursor.execute("UPDATE config SET value = NULL WHERE key = 'ping_role_id'")
-    else:
-        cursor.execute("UPDATE config SET value = ? WHERE key = 'ping_role_id'", (str(role_id),))
-    conn.commit()
-    conn.close()
-
-def get_ping_role_from_db() -> int | None:
-    conn = sqlite3.connect(DATABASE_FILE)
-    cursor = conn.cursor()
-    cursor.execute("SELECT value FROM config WHERE key = 'ping_role_id'")
-    row = cursor.fetchone()
-    conn.close()
-    if row and row[0] and row[0] != 'NULL': # Check for 'NULL' string
-        try:
-            return int(row[0])
-        except ValueError:
-            print(f"Warning: Invalid ping_role_id '{row[0]}' in database. Treating as None.")
-            return None
-    return None
+async def get_all_guild_ping_roles() -> dict[int, int]:
+    """Returns dict of {guild_id: ping_role_id} for all guilds with ping roles configured"""
+    async with async_session() as session:
+        result = await session.execute(
+            select(GuildConfig.guild_id, GuildConfig.ping_role_id)
+            .where(GuildConfig.ping_role_id.is_not(None))
+        )
+        guild_roles = {}
+        for row in result:
+            try:
+                guild_roles[row.guild_id] = int(row.ping_role_id)
+            except (ValueError, TypeError):
+                print(f"Warning: Invalid ping_role_id '{row.ping_role_id}' for guild {row.guild_id}. Skipping.")
+        return guild_roles
 
 # --- Repository and JSON Handling ---
-def clone_or_update_repo(repo_url, local_repo_path):
-    print(f"Cloning or updating repository from {repo_url} into {local_repo_path}...")
-    if os.path.exists(local_repo_path):
-        try:
-            repo = git.Repo(local_repo_path)
-            repo.remotes.origin.pull()
-            print(f"Repository {local_repo_path} updated.")
-        except git.exc.InvalidGitRepositoryError:
-            print(f"Invalid git repository at {local_repo_path}. Removing and re-cloning.")
-            shutil.rmtree(local_repo_path, ignore_errors=True)
+async def clone_or_update_repo(repo_url, local_repo_path):
+    def _sync_clone_or_update():
+        print(f"Cloning or updating repository from {repo_url} into {local_repo_path}...")
+        if os.path.exists(local_repo_path):
+            try:
+                repo = git.Repo(local_repo_path)
+                repo.remotes.origin.pull()
+                print(f"Repository {local_repo_path} updated.")
+            except git.exc.InvalidGitRepositoryError:
+                print(f"Invalid git repository at {local_repo_path}. Removing and re-cloning.")
+                shutil.rmtree(local_repo_path, ignore_errors=True)
+                git.Repo.clone_from(repo_url, local_repo_path)
+                print(f"Repository {local_repo_path} cloned fresh.")
+            except Exception as e: # Catch other potential git errors
+                print(f"Error updating repo {local_repo_path}: {e}. Attempting re-clone.")
+                shutil.rmtree(local_repo_path, ignore_errors=True)
+                git.Repo.clone_from(repo_url, local_repo_path)
+                print(f"Repository {local_repo_path} cloned fresh after error.")
+        else:
             git.Repo.clone_from(repo_url, local_repo_path)
             print(f"Repository {local_repo_path} cloned fresh.")
-        except Exception as e: # Catch other potential git errors
-            print(f"Error updating repo {local_repo_path}: {e}. Attempting re-clone.")
-            shutil.rmtree(local_repo_path, ignore_errors=True)
-            git.Repo.clone_from(repo_url, local_repo_path)
-            print(f"Repository {local_repo_path} cloned fresh after error.")
-    else:
-        git.Repo.clone_from(repo_url, local_repo_path)
-        print(f"Repository {local_repo_path} cloned fresh.")
+    
+    loop = asyncio.get_event_loop()
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        await loop.run_in_executor(executor, _sync_clone_or_update)
 
 def read_json(json_file_path):
     print(f"Reading JSON file from {json_file_path}...")
@@ -210,7 +267,7 @@ def get_term_emoji_and_string(role_data):
     return final_emoji_str, season_str
 
 
-def format_message(role, ping_role_id: int | None):
+def format_message(role, guild_id: int, guild_ping_roles: dict[int, int]):
     company_name_str = role.get('company_name', 'N/A Company')
     title_str = role.get('title', 'N/A Title')
     url_str = role.get('url', '#')
@@ -225,14 +282,12 @@ def format_message(role, ping_role_id: int | None):
         return (f"{EMOJI_NEW} **{company_name_str}** - {title_str}\n"
                 f"Term: {term_emoji} {term_str}. More details unavailable.")
 
-
     ping_str = ""
+    ping_role_id = guild_ping_roles.get(guild_id)
     if ping_role_id:
         should_ping = False
         # Example: Ping for specific terms like "Winter 2026"
         # You might want to make this list/logic configurable or more dynamic
-        if "winter 2026" in term_str.lower(): 
-            should_ping = True
         if any(company.lower() in company_name_str.lower() for company in BIG_TECH_COMPANIES):
             should_ping = True
         
@@ -256,13 +311,14 @@ def format_deactivation_message(role):
             f"[{title_str}]({url_str}) - Term: {term_emoji} {term_str}\n"
             f"Deactivated: {datetime.now().strftime('%b %d')}")
 
-def format_reactivation_message(role, ping_role_id: int | None):
+def format_reactivation_message(role, guild_id: int, guild_ping_roles: dict[int, int]):
     company_name_str = role.get('company_name', 'N/A Company')
     title_str = role.get('title', 'N/A Title')
     url_str = role.get('url', '#')
     term_emoji, term_str = get_term_emoji_and_string(role)
 
     ping_str = ""
+    ping_role_id = guild_ping_roles.get(guild_id)
     if ping_role_id:
         should_ping = False
         if "winter 2026" in term_str.lower(): # Consistent ping logic
@@ -278,10 +334,14 @@ def format_reactivation_message(role, ping_role_id: int | None):
 
 
 # --- Discord Interaction ---
-async def send_discord_message(message_content: str, channel_id: int):
+async def send_discord_message(message_content: str, guild_id: int, channel_id: int):
     global failed_channels, channel_failure_counts # Ensure we're modifying the global sets/dicts
-    if channel_id in failed_channels:
-        print(f"Skipping previously failed channel ID {channel_id}")
+    
+    # Use a composite key for failed channels since we now track by guild+channel
+    channel_key = f"{guild_id}:{channel_id}"
+    
+    if channel_key in failed_channels:
+        print(f"Skipping previously failed channel ID {channel_id} in guild {guild_id}")
         return
 
     try:
@@ -293,50 +353,57 @@ async def send_discord_message(message_content: str, channel_id: int):
         if not isinstance(channel, discord.TextChannel): # Check if it's a text channel
             print(f"Error: Channel ID {channel_id} is not a text channel. Skipping.")
             # Optionally, add to failed_channels if this is a persistent issue type
-            channel_failure_counts[channel_id] = channel_failure_counts.get(channel_id, 0) + MAX_RETRIES # Mark as failed
-            failed_channels.add(channel_id)
+            channel_failure_counts[channel_key] = channel_failure_counts.get(channel_key, 0) + MAX_RETRIES # Mark as failed
+            failed_channels.add(channel_key)
             return
 
         await channel.send(message_content)
-        print(f"Successfully sent message to channel {channel_id}")
-        if channel_id in channel_failure_counts: # Reset on success
-            del channel_failure_counts[channel_id]
-        if channel_id in failed_channels: # Also remove from perm failed if successful now
-             failed_channels.remove(channel_id)
+        print(f"Successfully sent message to channel {channel_id} in guild {guild_id}")
+        if channel_key in channel_failure_counts: # Reset on success
+            del channel_failure_counts[channel_key]
+        if channel_key in failed_channels: # Also remove from perm failed if successful now
+             failed_channels.remove(channel_key)
         await asyncio.sleep(1)  # Rate limiting
 
     except discord.NotFound:
-        print(f"Channel {channel_id} not found.")
-        channel_failure_counts[channel_id] = channel_failure_counts.get(channel_id, 0) + 1
+        print(f"Channel {channel_id} not found in guild {guild_id}.")
+        channel_failure_counts[channel_key] = channel_failure_counts.get(channel_key, 0) + 1
     except discord.Forbidden:
-        print(f"No permission for channel {channel_id}.")
-        failed_channels.add(channel_id) # Add to permanent failures for permission issues
+        print(f"No permission for channel {channel_id} in guild {guild_id}.")
+        failed_channels.add(channel_key) # Add to permanent failures for permission issues
     except Exception as e:
-        print(f"Error sending message to channel {channel_id}: {e}")
-        channel_failure_counts[channel_id] = channel_failure_counts.get(channel_id, 0) + 1
+        print(f"Error sending message to channel {channel_id} in guild {guild_id}: {e}")
+        channel_failure_counts[channel_key] = channel_failure_counts.get(channel_key, 0) + 1
     finally:
         # Add to failed_channels if retries exceeded
-        if channel_failure_counts.get(channel_id, 0) >= MAX_RETRIES:
-            print(f"Channel {channel_id} has failed {MAX_RETRIES} times, adding to failed channels for this session.")
-            failed_channels.add(channel_id)
+        if channel_failure_counts.get(channel_key, 0) >= MAX_RETRIES:
+            print(f"Channel {channel_id} in guild {guild_id} has failed {MAX_RETRIES} times, adding to failed channels for this session.")
+            failed_channels.add(channel_key)
 
 
-async def send_messages_to_all_configured_channels(message_content: str):
-    channel_ids = get_all_channels_from_db()
-    if not channel_ids:
+async def send_messages_to_all_configured_channels(message_content: str, guild_ping_roles: dict[int, int] = None):
+    channel_configs = await get_all_channels_from_db()
+    if not channel_configs:
         print("No channels configured in the database to send messages to.")
         return
 
-    active_channel_ids = [ch_id for ch_id in channel_ids if ch_id not in failed_channels]
+    if guild_ping_roles is None:
+        guild_ping_roles = await get_all_guild_ping_roles()
+
+    # Filter out failed channels
+    active_channel_configs = [
+        (guild_id, channel_id) for guild_id, channel_id in channel_configs 
+        if f"{guild_id}:{channel_id}" not in failed_channels
+    ]
     
-    tasks = [send_discord_message(message_content, ch_id) for ch_id in active_channel_ids]
+    tasks = [send_discord_message(message_content, guild_id, channel_id) for guild_id, channel_id in active_channel_configs]
     if tasks:
         await asyncio.gather(*tasks)
 
 # --- Core Update Logic ---
-def check_for_updates(repo_url, local_repo_path, json_file_path, previous_data_file, is_second_repo=False):
+async def check_for_updates(repo_url, local_repo_path, json_file_path, previous_data_file, is_second_repo=False):
     print(f"Checking for updates in {local_repo_path}...")
-    clone_or_update_repo(repo_url, local_repo_path)
+    await clone_or_update_repo(repo_url, local_repo_path)
     new_data = read_json(json_file_path)
 
     if os.path.exists(previous_data_file):
@@ -356,7 +423,7 @@ def check_for_updates(repo_url, local_repo_path, json_file_path, previous_data_f
     reactivated_roles = [] 
 
     old_roles_dict = {role['id']: role for role in old_data if 'id' in role and role['id'] is not None}
-    ping_role_id = get_ping_role_from_db() 
+    guild_ping_roles = await get_all_guild_ping_roles()  # Get all guild ping roles once
 
     for new_role in new_data:
         if 'id' not in new_role or new_role['id'] is None:
@@ -384,18 +451,27 @@ def check_for_updates(repo_url, local_repo_path, json_file_path, previous_data_f
     # Use client.loop for tasks if available, otherwise asyncio.get_event_loop()
     loop = client.loop if client and client.loop.is_running() else asyncio.get_event_loop()
 
+    # Send messages for each type of update
     for role in new_roles:
-        message = format_message(role, ping_role_id)
-        loop.create_task(send_messages_to_all_configured_channels(message))
+        # We need to send different messages to different guilds, so we'll handle this per-guild
+        channel_configs = await get_all_channels_from_db()
+        for guild_id, channel_id in channel_configs:
+            if f"{guild_id}:{channel_id}" not in failed_channels:
+                message = format_message(role, guild_id, guild_ping_roles)
+                loop.create_task(send_discord_message(message, guild_id, channel_id))
 
     for role in deactivated_roles:
         message = format_deactivation_message(role)
-        loop.create_task(send_messages_to_all_configured_channels(message))
+        loop.create_task(send_messages_to_all_configured_channels(message, guild_ping_roles))
 
     if is_second_repo:
         for role in reactivated_roles:
-            message = format_reactivation_message(role, ping_role_id)
-            loop.create_task(send_messages_to_all_configured_channels(message))
+            # We need to send different messages to different guilds, so we'll handle this per-guild
+            channel_configs = await get_all_channels_from_db()
+            for guild_id, channel_id in channel_configs:
+                if f"{guild_id}:{channel_id}" not in failed_channels:
+                    message = format_reactivation_message(role, guild_id, guild_ping_roles)
+                    loop.create_task(send_discord_message(message, guild_id, channel_id))
 
     try:
         with open(previous_data_file, 'w', encoding='utf-8') as file:
@@ -409,12 +485,11 @@ def check_for_updates(repo_url, local_repo_path, json_file_path, previous_data_f
         print(f"No updates found for {local_repo_path}.")
 
 # --- Scheduled Tasks ---
-def scheduled_task_wrapper(repo_url, local_path, json_path, prev_data_file, is_second):
-    # This function runs in a thread managed by 'schedule', so direct asyncio calls might be tricky.
-    # For simplicity, `check_for_updates` creates tasks on the bot's event loop.
+async def scheduled_task_wrapper(repo_url, local_path, json_path, prev_data_file, is_second):
+    # Updated to be async so it can call the async check_for_updates function
     print(f"Running scheduled check for {local_path} at {datetime.now()}")
     try:
-        check_for_updates(repo_url, local_path, json_path, prev_data_file, is_second_repo=is_second)
+        await check_for_updates(repo_url, local_path, json_path, prev_data_file, is_second_repo=is_second)
     except Exception as e:
         print(f"Error during scheduled task for {local_path}: {e}")
         # Consider sending an alert to a Discord channel if critical errors occur
@@ -424,9 +499,9 @@ def scheduled_task_wrapper(repo_url, local_path, json_path, prev_data_file, is_s
 
 
 async def background_scheduler():
-    # Schedule jobs
-    schedule.every(1).minutes.do(scheduled_task_wrapper, repo_url=REPO_URL, local_path=LOCAL_REPO_PATH, json_path=JSON_FILE_PATH, prev_data_file=PREVIOUS_DATA_FILE, is_second=False)
-    schedule.every(1).minutes.do(scheduled_task_wrapper, repo_url=REPO_URL_2, local_path=LOCAL_REPO_PATH_2, json_path=JSON_FILE_PATH_2, prev_data_file=PREVIOUS_DATA_FILE_2, is_second=True)
+    # Schedule jobs - now calling async wrapper functions
+    schedule.every(1).minutes.do(lambda: asyncio.create_task(scheduled_task_wrapper(repo_url=REPO_URL, local_path=LOCAL_REPO_PATH, json_path=JSON_FILE_PATH, prev_data_file=PREVIOUS_DATA_FILE, is_second=False)))
+    schedule.every(1).minutes.do(lambda: asyncio.create_task(scheduled_task_wrapper(repo_url=REPO_URL_2, local_path=LOCAL_REPO_PATH_2, json_path=JSON_FILE_PATH_2, prev_data_file=PREVIOUS_DATA_FILE_2, is_second=True)))
     
     memory_check_counter = 0
     while True:
@@ -451,52 +526,49 @@ async def background_scheduler():
             print("---------------------------------------------------")
 
 # --- Slash Commands ---
-@tree.command(name="add_channel", description="Adds a channel for bot notifications (Admin only).")
-@app_commands.describe(channel="The text channel to add notifications to.")
-async def add_channel_cmd(interaction: discord.Interaction, channel: discord.TextChannel):
+@tree.command(name="set_channel", description="Sets the notification channel for this guild (Admin only).")
+@app_commands.describe(channel="The text channel to receive notifications. Leave empty to remove the current channel.")
+async def set_channel_cmd(interaction: discord.Interaction, channel: discord.TextChannel = None):
     try:
-        add_channel_to_db(channel.id)
-        await interaction.response.send_message(f"Channel {channel.mention} will now receive notifications.", ephemeral=True)
+        if channel:
+            await set_guild_channel(interaction.guild.id, channel.id)
+            await interaction.response.send_message(f"Notification channel set to {channel.mention}.", ephemeral=True)
+        else:
+            current_channel_id = await get_guild_channel(interaction.guild.id)
+            if current_channel_id is None:
+                await interaction.response.send_message("No notification channel is currently configured for this guild.", ephemeral=True)
+                return
+                
+            await set_guild_channel(interaction.guild.id, None)
+            await interaction.response.send_message("Notification channel removed for this guild.", ephemeral=True)
     except Exception as e:
-        await interaction.response.send_message(f"Error adding channel: {e}", ephemeral=True)
+        await interaction.response.send_message(f"Error setting channel: {e}", ephemeral=True)
 
-@tree.command(name="remove_channel", description="Removes a channel from bot notifications (Admin only).")
-@app_commands.describe(channel="The text channel to remove notifications from.")
-async def remove_channel_cmd(interaction: discord.Interaction, channel: discord.TextChannel):
-    try:
-        remove_channel_from_db(channel.id)
-        await interaction.response.send_message(f"Channel {channel.mention} will no longer receive notifications.", ephemeral=True)
-    except Exception as e:
-        await interaction.response.send_message(f"Error removing channel: {e}", ephemeral=True)
-
-@tree.command(name="list_channels", description="Lists all channels receiving notifications (Admin only).")
+@tree.command(name="get_channel", description="Shows the notification channel for this guild (Admin only).")
 async def list_channels_cmd(interaction: discord.Interaction):
     try:
-        channel_ids = get_all_channels_from_db()
-        if not channel_ids:
-            await interaction.response.send_message("No channels are currently configured for notifications.", ephemeral=True)
+        channel_id = await get_guild_channel(interaction.guild.id)
+        if not channel_id:
+            await interaction.response.send_message("No notification channel is currently configured for this guild.", ephemeral=True)
             return
         
-        message_parts = ["Channels receiving notifications:"]
-        for ch_id in channel_ids:
-            ch = client.get_channel(ch_id) # Attempt to get channel object
-            if ch:
-                message_parts.append(f"- {ch.mention} (`{ch_id}`)")
-            else: # If channel object not found (e.g., bot removed from server, channel deleted)
-                message_parts.append(f"- Channel ID `{ch_id}` (Not currently accessible or may be invalid)")
-        await interaction.response.send_message("\n".join(message_parts), ephemeral=True)
+        channel = client.get_channel(channel_id)
+        if channel:
+            await interaction.response.send_message(f"Notification channel for this guild: {channel.mention} (`{channel_id}`)", ephemeral=True)
+        else:
+            await interaction.response.send_message(f"Notification channel ID: `{channel_id}` (Channel not currently accessible or may be invalid)", ephemeral=True)
     except Exception as e:
-        await interaction.response.send_message(f"Error listing channels: {e}", ephemeral=True)
+        await interaction.response.send_message(f"Error getting notification channel: {e}", ephemeral=True)
 
 @tree.command(name="set_ping_role", description="Sets the role to ping for important updates (Admin only).")
 @app_commands.describe(role="The role to ping. Leave empty to clear.")
 async def set_ping_role_cmd(interaction: discord.Interaction, role: discord.Role | None = None):
     try:
         if role:
-            set_ping_role_in_db(role.id)
+            await set_guild_ping_role(interaction.guild.id, role.id)
             await interaction.response.send_message(f"Ping role set to {role.mention}.", ephemeral=True)
         else:
-            set_ping_role_in_db(None) # Explicitly pass None
+            await set_guild_ping_role(interaction.guild.id, None) # Explicitly pass None
             await interaction.response.send_message("Ping role cleared.", ephemeral=True)
     except Exception as e:
         await interaction.response.send_message(f"Error setting ping role: {e}", ephemeral=True)
@@ -504,7 +576,7 @@ async def set_ping_role_cmd(interaction: discord.Interaction, role: discord.Role
 @tree.command(name="get_ping_role", description="Shows the currently configured ping role (Admin only).")
 async def get_ping_role_cmd(interaction: discord.Interaction):
     try:
-        role_id = get_ping_role_from_db()
+        role_id = await get_guild_ping_role(interaction.guild.id)
         if role_id:
             # Ensure guild is available from interaction before trying to get role
             guild = interaction.guild
@@ -522,14 +594,19 @@ async def get_ping_role_cmd(interaction: discord.Interaction):
         await interaction.response.send_message(f"Error getting ping role: {e}", ephemeral=True)
 
 # --- Bot Event Handlers ---
+async def cleanup_db():
+    """Properly close the database engine"""
+    await engine.dispose()
+    print("Database engine disposed.")
+
 @client.event
 async def on_ready():
     print(f"Preparing bot: {client.user}...")
-    init_db() # Initialize DB on startup
+    await init_db() # Initialize DB on startup
     
     # Sync slash commands. This can be done globally or per-guild.
     # For simplicity, global sync. For faster updates during dev, sync to a specific guild.
-    # await tree.sync(guild=discord.Object(id=YOUR_GUILD_ID)) # Example for guild-specific sync
+    # await tree.sync(guild=discord.Object(id=DISCORD_GUILD_ID)) # Example for guild-specific sync
     await tree.sync() 
     
     print(f"Logged in as {client.user} (ID: {client.user.id})")
@@ -550,6 +627,11 @@ async def on_ready():
         client.loop.create_task(background_scheduler())
         print("Background scheduler started.")
 
+@client.event
+async def on_disconnect():
+    """Clean up when bot disconnects"""
+    print("Bot disconnected. Cleaning up database connections...")
+    await cleanup_db()
 
 # --- Error Handling for Slash Commands ---
 @tree.error
