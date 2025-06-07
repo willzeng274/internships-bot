@@ -181,31 +181,52 @@ async def get_all_guild_ping_roles() -> dict[int, int]:
         return guild_roles
 
 # --- Repository and JSON Handling ---
-async def clone_or_update_repo(repo_url, local_repo_path):
-    def _sync_clone_or_update():
-        print(f"Cloning or updating repository from {repo_url} into {local_repo_path}...")
-        if os.path.exists(local_repo_path):
+async def update_both_repos():
+    """Update both repositories sequentially in one threadpool executor"""
+    def _sync_update_both():
+        print(f"Cloning or updating repository from {REPO_URL} into {LOCAL_REPO_PATH}...")
+        if os.path.exists(LOCAL_REPO_PATH):
             try:
-                repo = git.Repo(local_repo_path)
+                repo = git.Repo(LOCAL_REPO_PATH)
                 repo.remotes.origin.pull()
-                print(f"Repository {local_repo_path} updated.")
+                print(f"Repository {LOCAL_REPO_PATH} updated.")
             except git.exc.InvalidGitRepositoryError:
-                print(f"Invalid git repository at {local_repo_path}. Removing and re-cloning.")
-                shutil.rmtree(local_repo_path, ignore_errors=True)
-                git.Repo.clone_from(repo_url, local_repo_path)
-                print(f"Repository {local_repo_path} cloned fresh.")
-            except Exception as e: # Catch other potential git errors
-                print(f"Error updating repo {local_repo_path}: {e}. Attempting re-clone.")
-                shutil.rmtree(local_repo_path, ignore_errors=True)
-                git.Repo.clone_from(repo_url, local_repo_path)
-                print(f"Repository {local_repo_path} cloned fresh after error.")
+                print(f"Invalid git repository at {LOCAL_REPO_PATH}. Removing and re-cloning.")
+                shutil.rmtree(LOCAL_REPO_PATH, ignore_errors=True)
+                git.Repo.clone_from(REPO_URL, LOCAL_REPO_PATH)
+                print(f"Repository {LOCAL_REPO_PATH} cloned fresh.")
+            except Exception as e:
+                print(f"Error updating repo {LOCAL_REPO_PATH}: {e}. Attempting re-clone.")
+                shutil.rmtree(LOCAL_REPO_PATH, ignore_errors=True)
+                git.Repo.clone_from(REPO_URL, LOCAL_REPO_PATH)
+                print(f"Repository {LOCAL_REPO_PATH} cloned fresh after error.")
         else:
-            git.Repo.clone_from(repo_url, local_repo_path)
-            print(f"Repository {local_repo_path} cloned fresh.")
+            git.Repo.clone_from(REPO_URL, LOCAL_REPO_PATH)
+            print(f"Repository {LOCAL_REPO_PATH} cloned fresh.")
+
+        print(f"Cloning or updating repository from {REPO_URL_2} into {LOCAL_REPO_PATH_2}...")
+        if os.path.exists(LOCAL_REPO_PATH_2):
+            try:
+                repo = git.Repo(LOCAL_REPO_PATH_2)
+                repo.remotes.origin.pull()
+                print(f"Repository {LOCAL_REPO_PATH_2} updated.")
+            except git.exc.InvalidGitRepositoryError:
+                print(f"Invalid git repository at {LOCAL_REPO_PATH_2}. Removing and re-cloning.")
+                shutil.rmtree(LOCAL_REPO_PATH_2, ignore_errors=True)
+                git.Repo.clone_from(REPO_URL_2, LOCAL_REPO_PATH_2)
+                print(f"Repository {LOCAL_REPO_PATH_2} cloned fresh.")
+            except Exception as e:
+                print(f"Error updating repo {LOCAL_REPO_PATH_2}: {e}. Attempting re-clone.")
+                shutil.rmtree(LOCAL_REPO_PATH_2, ignore_errors=True)
+                git.Repo.clone_from(REPO_URL_2, LOCAL_REPO_PATH_2)
+                print(f"Repository {LOCAL_REPO_PATH_2} cloned fresh after error.")
+        else:
+            git.Repo.clone_from(REPO_URL_2, LOCAL_REPO_PATH_2)
+            print(f"Repository {LOCAL_REPO_PATH_2} cloned fresh.")
     
     loop = asyncio.get_event_loop()
     with concurrent.futures.ThreadPoolExecutor() as executor:
-        await loop.run_in_executor(executor, _sync_clone_or_update)
+        await loop.run_in_executor(executor, _sync_update_both)
 
 def read_json(json_file_path):
     print(f"Reading JSON file from {json_file_path}...")
@@ -400,38 +421,61 @@ async def send_messages_to_all_configured_channels(message_content: str, guild_p
     if tasks:
         await asyncio.gather(*tasks)
 
-# --- Core Update Logic ---
-async def check_for_updates(repo_url, local_repo_path, json_file_path, previous_data_file, is_second_repo=False):
-    print(f"Checking for updates in {local_repo_path}...")
-    await clone_or_update_repo(repo_url, local_repo_path)
-    new_data = read_json(json_file_path)
+# --- Scheduled Tasks ---
+async def combined_scheduled_task():
+    """Combined scheduled task that processes both repos sequentially"""
+    print(f"Running scheduled check for both repos at {datetime.now()}")
+    try:
+        await update_both_repos()
 
-    if os.path.exists(previous_data_file):
-        try:
-            with open(previous_data_file, 'r', encoding='utf-8') as file:
-                old_data = json.load(file)
-            print(f"Previous data loaded from {previous_data_file}.")
-        except (FileNotFoundError, json.JSONDecodeError) as e:
-            print(f"Error reading or decoding previous data file {previous_data_file}: {e}. Starting fresh.")
+        new_data = read_json(JSON_FILE_PATH)
+        if os.path.exists(PREVIOUS_DATA_FILE):
+            try:
+                with open(PREVIOUS_DATA_FILE, 'r', encoding='utf-8') as file:
+                    old_data = json.load(file)
+                print(f"Previous data loaded from {PREVIOUS_DATA_FILE}.")
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                print(f"Error reading or decoding previous data file {PREVIOUS_DATA_FILE}: {e}. Starting fresh.")
+                old_data = []
+        else:
             old_data = []
-    else:
-        old_data = []
-        print(f"No previous data found at {previous_data_file}. Initializing.")
+            print(f"No previous data found at {PREVIOUS_DATA_FILE}. Initializing.")
 
+        await process_repo_updates(new_data, old_data, PREVIOUS_DATA_FILE, LOCAL_REPO_PATH, is_second_repo=False)
+        
+        # Process second repo
+        new_data_2 = read_json(JSON_FILE_PATH_2)
+        if os.path.exists(PREVIOUS_DATA_FILE_2):
+            try:
+                with open(PREVIOUS_DATA_FILE_2, 'r', encoding='utf-8') as file:
+                    old_data_2 = json.load(file)
+                print(f"Previous data loaded from {PREVIOUS_DATA_FILE_2}.")
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                print(f"Error reading or decoding previous data file {PREVIOUS_DATA_FILE_2}: {e}. Starting fresh.")
+                old_data_2 = []
+        else:
+            old_data_2 = []
+            print(f"No previous data found at {PREVIOUS_DATA_FILE_2}. Initializing.")
+
+        await process_repo_updates(new_data_2, old_data_2, PREVIOUS_DATA_FILE_2, LOCAL_REPO_PATH_2, is_second_repo=True)
+        
+    except Exception as e:
+        print(f"Error during combined scheduled task: {e}")
+
+async def process_repo_updates(new_data, old_data, previous_data_file, local_repo_path, is_second_repo=False):
+    """Process updates for a single repo"""
     new_roles = []
     deactivated_roles = []
     reactivated_roles = [] 
 
     old_roles_dict = {role['id']: role for role in old_data if 'id' in role and role['id'] is not None}
-    guild_ping_roles = await get_all_guild_ping_roles()  # Get all guild ping roles once
+    guild_ping_roles = await get_all_guild_ping_roles()
 
     for new_role in new_data:
         if 'id' not in new_role or new_role['id'] is None:
-            # print(f"Skipping new_role in {local_repo_path} due to missing or None ID: title='{new_role.get('title')}', company='{new_role.get('company_name')}'")
             continue
 
         old_role = old_roles_dict.get(new_role['id'])
-        # Default 'active' and 'is_visible' to True if missing, as per common use cases
         new_role_is_active = _is_value_truthy(new_role.get('active', True))
         new_role_is_visible = _is_value_truthy(new_role.get('is_visible', True))
 
@@ -440,20 +484,14 @@ async def check_for_updates(repo_url, local_repo_path, json_file_path, previous_
 
             if old_role_is_active and not new_role_is_active:
                 deactivated_roles.append(new_role)
-                # print(f"Role id='{new_role['id']}' ('{new_role['title']}' at '{new_role['company_name']}') in {local_repo_path} is now inactive.")
             elif is_second_repo and not old_role_is_active and new_role_is_active and new_role_is_visible:
                 reactivated_roles.append(new_role)
-                # print(f"Role id='{new_role['id']}' ('{new_role['title']}' at '{new_role['company_name']}') in {local_repo_path} is now re-activated.")
         elif new_role_is_visible and new_role_is_active: 
             new_roles.append(new_role)
-            # print(f"New role found in {local_repo_path}: id='{new_role.get('id')}', title='{new_role['title']}' at '{new_role['company_name']}'")
 
-    # Use client.loop for tasks if available, otherwise asyncio.get_event_loop()
     loop = client.loop if client and client.loop.is_running() else asyncio.get_event_loop()
 
-    # Send messages for each type of update
     for role in new_roles:
-        # We need to send different messages to different guilds, so we'll handle this per-guild
         channel_configs = await get_all_channels_from_db()
         for guild_id, channel_id in channel_configs:
             if f"{guild_id}:{channel_id}" not in failed_channels:
@@ -466,7 +504,6 @@ async def check_for_updates(repo_url, local_repo_path, json_file_path, previous_
 
     if is_second_repo:
         for role in reactivated_roles:
-            # We need to send different messages to different guilds, so we'll handle this per-guild
             channel_configs = await get_all_channels_from_db()
             for guild_id, channel_id in channel_configs:
                 if f"{guild_id}:{channel_id}" not in failed_channels:
@@ -480,43 +517,23 @@ async def check_for_updates(repo_url, local_repo_path, json_file_path, previous_
     except IOError as e:
         print(f"Error writing previous data file {previous_data_file}: {e}")
 
-
     if not new_roles and not deactivated_roles and (not is_second_repo or not reactivated_roles):
         print(f"No updates found for {local_repo_path}.")
 
-# --- Scheduled Tasks ---
-async def scheduled_task_wrapper(repo_url, local_path, json_path, prev_data_file, is_second):
-    # Updated to be async so it can call the async check_for_updates function
-    print(f"Running scheduled check for {local_path} at {datetime.now()}")
-    try:
-        await check_for_updates(repo_url, local_path, json_path, prev_data_file, is_second_repo=is_second)
-    except Exception as e:
-        print(f"Error during scheduled task for {local_path}: {e}")
-        # Consider sending an alert to a Discord channel if critical errors occur
-        # admin_alert_channel_id = 1234567890 # Replace with your admin channel ID
-        # if client and client.loop.is_running():
-        #    client.loop.create_task(send_discord_message(f"🚨 BOT ERROR in scheduled task for {local_path}: {type(e).__name__} - {e}", admin_alert_channel_id))
-
 
 async def background_scheduler():
-    # Schedule jobs - now calling async wrapper functions
-    schedule.every(1).minutes.do(lambda: asyncio.create_task(scheduled_task_wrapper(repo_url=REPO_URL, local_path=LOCAL_REPO_PATH, json_path=JSON_FILE_PATH, prev_data_file=PREVIOUS_DATA_FILE, is_second=False)))
-    schedule.every(1).minutes.do(lambda: asyncio.create_task(scheduled_task_wrapper(repo_url=REPO_URL_2, local_path=LOCAL_REPO_PATH_2, json_path=JSON_FILE_PATH_2, prev_data_file=PREVIOUS_DATA_FILE_2, is_second=True)))
+    # Single scheduled job that handles both repos
+    schedule.every(1).minutes.do(lambda: asyncio.create_task(combined_scheduled_task()))
     
     memory_check_counter = 0
     while True:
-        # Run all pending jobs in the 'schedule' library
-        # This needs to be called from a context that doesn't block the asyncio loop for long.
-        # Running schedule.run_pending() directly here is fine as it's quick if no jobs are due.
         schedule.run_pending()
-        await asyncio.sleep(1) # Check schedule every second
+        await asyncio.sleep(1)
 
         memory_check_counter += 1
         if memory_check_counter % 300 == 0: # Approx every 5 minutes (300 seconds)
             current_mem, peak_mem = tracemalloc.get_traced_memory()
             peak_rss_kb = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-            # macOS reports ru_maxrss in bytes, Linux in kilobytes. Convert if necessary.
-            # For simplicity, assuming KB if not on darwin, otherwise convert.
             peak_rss_display = peak_rss_kb / 1024 if os.uname().sysname == 'Darwin' else peak_rss_kb
             
             print(f"--- Memory Usage ({datetime.now().strftime('%Y-%m-%d %H:%M:%S')}) ---")
@@ -528,7 +545,7 @@ async def background_scheduler():
 # --- Slash Commands ---
 @tree.command(name="set_channel", description="Sets the notification channel for this guild (Admin only).")
 @app_commands.describe(channel="The text channel to receive notifications. Leave empty to remove the current channel.")
-async def set_channel_cmd(interaction: discord.Interaction, channel: discord.TextChannel = None):
+async def set_channel_cmd(interaction: discord.Interaction, channel: discord.TextChannel | None = None):
     try:
         if channel:
             await set_guild_channel(interaction.guild.id, channel.id)
