@@ -1,15 +1,13 @@
 import json
 import os
 from datetime import datetime
-import git
 import schedule
 import discord
 from discord import app_commands
 import asyncio
-import shutil
 import tracemalloc
 import resource
-import concurrent.futures
+import aiohttp
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy import Column, Integer, select
 from sqlalchemy.orm import sessionmaker, declarative_base
@@ -21,14 +19,9 @@ load_dotenv()
 tracemalloc.start()
 
 # Constants
-REPO_URL = 'https://github.com/vanshb03/Summer2025-Internships'
-LOCAL_REPO_PATH = 'Summer2025-Internships'
-JSON_FILE_PATH = os.path.join(LOCAL_REPO_PATH, '.github', 'scripts', 'listings.json')
+JSON_URL_1 = 'https://raw.githubusercontent.com/vanshb03/Summer2026-Internships/refs/heads/dev/.github/scripts/listings.json'
+JSON_URL_2 = 'https://raw.githubusercontent.com/SimplifyJobs/Summer2025-Internships/refs/heads/dev/.github/scripts/listings.json'
 PREVIOUS_DATA_FILE = 'previous_data.json'
-
-REPO_URL_2 = 'https://github.com/SimplifyJobs/Summer2025-Internships'
-LOCAL_REPO_PATH_2 = 'Summer2025-Internships_Simplify'
-JSON_FILE_PATH_2 = os.path.join(LOCAL_REPO_PATH_2, '.github', 'scripts', 'listings.json')
 PREVIOUS_DATA_FILE_2 = 'previous_data_simplify.json'
 
 DISCORD_TOKEN = os.getenv("BOT_TOKEN")
@@ -184,52 +177,26 @@ async def get_all_guild_ping_roles() -> dict[int, int]:
         return guild_roles
 
 # --- Repository and JSON Handling ---
-async def update_both_repos():
-    """Update both repositories sequentially in one threadpool executor"""
-    def _sync_update_both():
-        print(f"Cloning or updating repository from {REPO_URL} into {LOCAL_REPO_PATH}...")
-        if os.path.exists(LOCAL_REPO_PATH):
-            try:
-                repo = git.Repo(LOCAL_REPO_PATH)
-                repo.remotes.origin.pull()
-                print(f"Repository {LOCAL_REPO_PATH} updated.")
-            except git.exc.InvalidGitRepositoryError:
-                print(f"Invalid git repository at {LOCAL_REPO_PATH}. Removing and re-cloning.")
-                shutil.rmtree(LOCAL_REPO_PATH, ignore_errors=True)
-                git.Repo.clone_from(REPO_URL, LOCAL_REPO_PATH)
-                print(f"Repository {LOCAL_REPO_PATH} cloned fresh.")
-            except Exception as e:
-                print(f"Error updating repo {LOCAL_REPO_PATH}: {e}. Attempting re-clone.")
-                shutil.rmtree(LOCAL_REPO_PATH, ignore_errors=True)
-                git.Repo.clone_from(REPO_URL, LOCAL_REPO_PATH)
-                print(f"Repository {LOCAL_REPO_PATH} cloned fresh after error.")
-        else:
-            git.Repo.clone_from(REPO_URL, LOCAL_REPO_PATH)
-            print(f"Repository {LOCAL_REPO_PATH} cloned fresh.")
-
-        print(f"Cloning or updating repository from {REPO_URL_2} into {LOCAL_REPO_PATH_2}...")
-        if os.path.exists(LOCAL_REPO_PATH_2):
-            try:
-                repo = git.Repo(LOCAL_REPO_PATH_2)
-                repo.remotes.origin.pull()
-                print(f"Repository {LOCAL_REPO_PATH_2} updated.")
-            except git.exc.InvalidGitRepositoryError:
-                print(f"Invalid git repository at {LOCAL_REPO_PATH_2}. Removing and re-cloning.")
-                shutil.rmtree(LOCAL_REPO_PATH_2, ignore_errors=True)
-                git.Repo.clone_from(REPO_URL_2, LOCAL_REPO_PATH_2)
-                print(f"Repository {LOCAL_REPO_PATH_2} cloned fresh.")
-            except Exception as e:
-                print(f"Error updating repo {LOCAL_REPO_PATH_2}: {e}. Attempting re-clone.")
-                shutil.rmtree(LOCAL_REPO_PATH_2, ignore_errors=True)
-                git.Repo.clone_from(REPO_URL_2, LOCAL_REPO_PATH_2)
-                print(f"Repository {LOCAL_REPO_PATH_2} cloned fresh after error.")
-        else:
-            git.Repo.clone_from(REPO_URL_2, LOCAL_REPO_PATH_2)
-            print(f"Repository {LOCAL_REPO_PATH_2} cloned fresh.")
-    
-    loop = asyncio.get_event_loop()
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        await loop.run_in_executor(executor, _sync_update_both)
+async def fetch_json_from_url(url: str) -> list:
+    """Fetch JSON data directly from URL"""
+    print(f"Fetching JSON data from {url}...")
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    text_data = await response.text()
+                    data = json.loads(text_data)
+                    print(f"Successfully fetched {len(data)} items from {url}")
+                    return data
+                else:
+                    print(f"Error fetching {url}: HTTP {response.status}")
+                    return []
+    except json.JSONDecodeError as e:
+        print(f"Error parsing JSON from {url}: {e}")
+        return []
+    except Exception as e:
+        print(f"Error fetching JSON from {url}: {e}")
+        return []
 
 def read_json(json_file_path):
     print(f"Reading JSON file from {json_file_path}...")
@@ -436,9 +403,7 @@ async def combined_scheduled_task():
     is_task_running = True
     print(f"Running scheduled check for both repos at {datetime.now()}")
     try:
-        await update_both_repos()
-
-        new_data = read_json(JSON_FILE_PATH)
+        new_data = await fetch_json_from_url(JSON_URL_1)
         if os.path.exists(PREVIOUS_DATA_FILE):
             try:
                 with open(PREVIOUS_DATA_FILE, 'r', encoding='utf-8') as file:
@@ -451,9 +416,9 @@ async def combined_scheduled_task():
             old_data = []
             print(f"No previous data found at {PREVIOUS_DATA_FILE}. Initializing.")
 
-        await process_repo_updates(new_data, old_data, PREVIOUS_DATA_FILE, LOCAL_REPO_PATH, is_second_repo=False)
+        await process_repo_updates(new_data, old_data, PREVIOUS_DATA_FILE, JSON_URL_1, is_second_repo=False)
         
-        new_data_2 = read_json(JSON_FILE_PATH_2)
+        new_data_2 = await fetch_json_from_url(JSON_URL_2)
         if os.path.exists(PREVIOUS_DATA_FILE_2):
             try:
                 with open(PREVIOUS_DATA_FILE_2, 'r', encoding='utf-8') as file:
@@ -466,7 +431,7 @@ async def combined_scheduled_task():
             old_data_2 = []
             print(f"No previous data found at {PREVIOUS_DATA_FILE_2}. Initializing.")
 
-        await process_repo_updates(new_data_2, old_data_2, PREVIOUS_DATA_FILE_2, LOCAL_REPO_PATH_2, is_second_repo=True)
+        await process_repo_updates(new_data_2, old_data_2, PREVIOUS_DATA_FILE_2, JSON_URL_2, is_second_repo=True)
         
     except Exception as e:
         is_task_running = False
@@ -482,7 +447,7 @@ def try_start_scheduled_task():
     else:
         print("Scheduled task already running, skipping")
 
-async def process_repo_updates(new_data, old_data, previous_data_file, local_repo_path, is_second_repo=False):
+async def process_repo_updates(new_data, old_data, previous_data_file, repo_url, is_second_repo=False):
     """Process updates for a single repo"""
     new_roles = []
     deactivated_roles = []
@@ -538,7 +503,7 @@ async def process_repo_updates(new_data, old_data, previous_data_file, local_rep
         print(f"Error writing previous data file {previous_data_file}: {e}")
 
     if not new_roles and not deactivated_roles and (not is_second_repo or not reactivated_roles):
-        print(f"No updates found for {local_repo_path}.")
+        print(f"No updates found for {repo_url}.")
 
 
 async def background_scheduler():
