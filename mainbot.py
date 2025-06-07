@@ -66,6 +66,9 @@ tree = app_commands.CommandTree(client)
 failed_channels = set()
 channel_failure_counts = {}
 
+# Global flag to track if scheduled task is running
+is_task_running = False
+
 # --- SQLAlchemy Setup ---
 Base = declarative_base()
 
@@ -424,6 +427,13 @@ async def send_messages_to_all_configured_channels(message_content: str, guild_p
 # --- Scheduled Tasks ---
 async def combined_scheduled_task():
     """Combined scheduled task that processes both repos sequentially"""
+    global is_task_running
+    
+    if is_task_running:
+        print("Previous task still running, skipping this execution")
+        return
+    
+    is_task_running = True
     print(f"Running scheduled check for both repos at {datetime.now()}")
     try:
         await update_both_repos()
@@ -443,7 +453,6 @@ async def combined_scheduled_task():
 
         await process_repo_updates(new_data, old_data, PREVIOUS_DATA_FILE, LOCAL_REPO_PATH, is_second_repo=False)
         
-        # Process second repo
         new_data_2 = read_json(JSON_FILE_PATH_2)
         if os.path.exists(PREVIOUS_DATA_FILE_2):
             try:
@@ -460,7 +469,18 @@ async def combined_scheduled_task():
         await process_repo_updates(new_data_2, old_data_2, PREVIOUS_DATA_FILE_2, LOCAL_REPO_PATH_2, is_second_repo=True)
         
     except Exception as e:
+        is_task_running = False
         print(f"Error during combined scheduled task: {e}")
+    finally:
+        is_task_running = False
+        print(f"Scheduled task completed at {datetime.now()}")
+
+def try_start_scheduled_task():
+    """Function to start scheduled task only if not already running"""
+    if not is_task_running:
+        asyncio.create_task(combined_scheduled_task())
+    else:
+        print("Scheduled task already running, skipping")
 
 async def process_repo_updates(new_data, old_data, previous_data_file, local_repo_path, is_second_repo=False):
     """Process updates for a single repo"""
@@ -523,7 +543,7 @@ async def process_repo_updates(new_data, old_data, previous_data_file, local_rep
 
 async def background_scheduler():
     # Single scheduled job that handles both repos
-    schedule.every(1).minutes.do(lambda: asyncio.create_task(combined_scheduled_task()))
+    schedule.every(1).minutes.do(try_start_scheduled_task)
     
     memory_check_counter = 0
     while True:
