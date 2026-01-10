@@ -2793,7 +2793,7 @@
     ],
     "sponsorship": "Other",
     "active": false,
-    "company_name": "84.51\u00b0",
+    "company_name": "84.51°",
     "title": "Agile Delivery Co-op Program",
     "season": "Fall",
     "source": "vanshb03",
@@ -2810,7 +2810,7 @@
     ],
     "sponsorship": "Other",
     "active": false,
-    "company_name": "84.51\u00b0",
+    "company_name": "84.51°",
     "title": "Software Engineer Co-op Program",
     "season": "Fall",
     "source": "vanshb03",
@@ -8490,7 +8490,7 @@
     "sponsorship": "Other",
     "active": true,
     "company_name": "Microsoft",
-    "title": "Applied Scientist Intern, Microsoft AI \u2013 PhD",
+    "title": "Applied Scientist Intern, Microsoft AI – PhD",
     "source": "vanshb03",
     "id": "41657dc7-443e-4487-bc1d-4db4aa7c0dd8",
     "date_posted": 1755162371,
@@ -10367,13 +10367,13 @@
     "season": "Summer"
   },
   {
-    "date_updated": 1756068163,
+    "date_updated": 1756595618,
     "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Embedded-Systems-Software-Intern--Linux-and-Jetson---Winter-2026_JR2001802-1?source=Appcast_Indeedo&source=jobboardindeed&ittk=NFPYJGP0UO",
     "locations": [
       "Santa Clara, CA"
     ],
     "sponsorship": "Other",
-    "active": true,
+    "active": false,
     "company_name": "NVIDIA",
     "title": "Embedded Systems Software Intern, Linux and Jetson",
     "source": "vanshb03",
@@ -10384,13 +10384,13 @@
     "season": "Winter"
   },
   {
-    "date_updated": 1756068169,
+    "date_updated": 1756595620,
     "url": "https://theocc.wd5.myworkdayjobs.com/en-US/careers/job/Chicago---125-S-Franklin/Platform-Engineering-Summer-Intern_REQ-4355?source=Indeed",
     "locations": [
       "Chicago, IL"
     ],
     "sponsorship": "Other",
-    "active": true,
+    "active": false,
     "company_name": "OCC",
     "title": "Platform Engineering Intern",
     "source": "vanshb03",
@@ -10401,13 +10401,13 @@
     "season": "Summer"
   },
   {
-    "date_updated": 1756068841,
+    "date_updated": 1756595623,
     "url": "https://theocc.wd5.myworkdayjobs.com/careers/job/Chicago---125-S-Franklin/Enterprise-Quality-Management-Summer-Intern_REQ-4364?source=Linkedin",
     "locations": [
       "Chicago, IL"
     ],
     "sponsorship": "Does Not Offer Sponsorship",
-    "active": true,
+    "active": false,
     "company_name": "OCC",
     "title": "Enterprise Quality Management Summer Intern",
     "season": "Summer",
@@ -10808,13 +10808,13 @@
     "is_visible": true
   },
   {
-    "date_updated": 1756134267,
+    "date_updated": 1756340884,
     "url": "https://jobs.northropgrumman.com/careers/job/1340060650174",
     "locations": [
       "Melbourne, FL"
     ],
     "sponsorship": "U.S. Citizenship is Required",
-    "active": true,
+    "active": false,
     "company_name": "Northrup Grumman",
     "title": "2026 Intern Software Engineer",
     "season": "Summer",
@@ -10930,14 +10930,14 @@
     "is_visible": true
   },
   {
-    "date_updated": 1756162054,
+    "date_updated": 1756595635,
     "url": "https://pru.wd5.myworkdayjobs.com/en-US/Careers/job/Newark-NJ-USA/PGIM--2026-Technology-Internship-Program_R-121813-1",
     "locations": [
       "Newark, NJ",
       "Tampa, FL"
     ],
     "sponsorship": "Does Not Offer Sponsorship",
-    "active": true,
+    "active": false,
     "company_name": "Prudential Financial",
     "title": "Technology Internship Program",
     "season": "Summer",
@@ -10948,13 +10948,13 @@
     "is_visible": true
   },
   {
-    "date_updated": 1756162081,
+    "date_updated": 1756868227,
     "url": "https://pru.wd5.myworkdayjobs.com/en-US/Careers/job/Newark-NJ-USA/Prudential--2026-Global-Technology---Operations--Internship-Program_R-121563-1",
     "locations": [
       "Newark, NJ"
     ],
     "sponsorship": "Does Not Offer Sponsorship",
-    "active": true,
+    "active": false,
     "company_name": "Prudential Financial",
     "title": "Global Technology & Operations, Internship Program",
     "season": "Summer",
@@ -11008,7 +11008,7 @@
     "sponsorship": "Does Not Offer Sponsorship",
     "active": true,
     "company_name": "Fannie Mae",
-    "title": "Technology Program Intern\u202f",
+    "title": "Technology Program Intern ",
     "season": "Summer",
     "source": "aprameyak",
     "id": "7ed89646-5c79-4fc6-953a-ddcbfca9d832",
@@ -11329,13 +11329,13 @@
     "season": "Summer"
   },
   {
-    "date_updated": 1756240368,
+    "date_updated": 1756340878,
     "url": "https://fmr.wd1.myworkdayjobs.com/targeted/job/XMLNAME-2100827-Summer-2026-Undergraduate-Internship---Technology_2117047",
     "locations": [
       "United States"
     ],
     "sponsorship": "Does Not Offer Sponsorship",
-    "active": true,
+    "active": false,
     "company_name": "Fidelity",
     "title": "Undergraduate Intern, Technology",
     "source": "vanshb03",
@@ -11451,9 +11451,9 @@
   },
   {
     "date_updated": 1756314940,
-    "url": "https://jobs.cisco.com/jobs/ProjectDetail/Security-Consulting-Engineer-I-Intern-United-States/1448053?source=Cisco+Jobs+Career+Site&tags=CDC+Keyword+Search+students-and-new-graduates&user=1",
+    "url": "https://jobs.cisco.com/jobs/ProjectDetail/Security-Consulting-Engineer-I-Intern-United-States/",
     "locations": [
-      "RTP, NC"
+      "Research Triangle Park, NC"
     ],
     "sponsorship": "Does Not Offer Sponsorship",
     "active": true,
@@ -11487,13 +11487,13 @@
     "is_visible": true
   },
   {
-    "date_updated": 1756314999,
+    "date_updated": 1756340881,
     "url": "https://dell.wd1.myworkdayjobs.com/en-US/External/job/Round-Rock%2C-Texas%2C-United-States/Dell-Summer-Internship---Software-Engineering_R276698",
     "locations": [
       "Round Rock, TX"
     ],
     "sponsorship": "Other",
-    "active": true,
+    "active": false,
     "company_name": "Dell",
     "title": "Software Engineer Intern",
     "season": "Summer",
@@ -11519,5 +11519,3127 @@
     "date_posted": 1756315064,
     "company_url": "",
     "is_visible": true
+  },
+  {
+    "date_updated": 1756341058,
+    "url": "https://jobs.careers.microsoft.com/global/en/job/1864360/Data-Engineer-Intern:-Internship-Opportunities---Redmond?fbclid=PAZXh0bgNhZW0CMTEAAach0SNotdoUUi2mxRR7ZqIb6z8PKKf2L0NiKky_vQ3mrN2NRN7ZOiD0zIhKrw_aem_8zutlHGTayeEIhsbsSXWJw",
+    "locations": [
+      "Redmond, WA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Microsoft",
+    "title": "Data Engineer Intern",
+    "season": "Summer",
+    "source": "XaJason",
+    "id": "5c273aba-3299-40ee-b44d-971603c3d265",
+    "date_posted": 1756341058,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341123,
+    "url": "https://job-boards.greenhouse.io/verkada/jobs/4840368007?gh_src=cda0ce657us",
+    "locations": [
+      "San Mateo, CA"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "Verkada",
+    "title": "Frontend Software Engineering Intern",
+    "season": "Summer",
+    "source": "Andy2887",
+    "id": "81bbe24c-36e0-4e55-a109-15833ba41281",
+    "date_posted": 1756341123,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341138,
+    "url": "https://job-boards.greenhouse.io/verkada/jobs/4836993007?gh_src=cda0ce657us",
+    "locations": [
+      "San Mateo, CA"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "Verkada",
+    "title": "Backend Software Engineering Intern",
+    "season": "Summer",
+    "source": "Andy2887",
+    "id": "94018c84-9b5f-4a7a-a8e1-6b2b92e29144",
+    "date_posted": 1756341138,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341165,
+    "url": "https://ibmglobal.avature.net/en_US/careers/JobDetail?jobId=55372&source=WEB_Search_NA&tags=&user=&formValues=",
+    "locations": [
+      "Sandy Springs, GA",
+      "Poughkeepsie, NY",
+      "Lowell, MA",
+      "Rochester, MN",
+      "Tucson, AZ",
+      "Research Triangle Park, NC",
+      "Durham, NC",
+      "Hopewell Junction, NY",
+      "San Jose, CA",
+      "Dallas, TX",
+      "Houston, TX",
+      "Austin, TX",
+      "Herndon, VA",
+      "New York, NY"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "IBM",
+    "title": "Back End Developer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "56d8fe9d-20f8-4e28-a4e0-c6819d1cf4a7",
+    "date_posted": 1756341165,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341232,
+    "url": "https://careers.hpe.com/us/en/job/1193025/Software-Engineering-Intern",
+    "locations": [
+      "Roseville, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Hewlett Packard Enterprise",
+    "title": "Software Engineering Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "9ab550e2-4c5e-42c4-9332-94319e5e7ce2",
+    "date_posted": 1756341232,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341243,
+    "url": "https://jobs.careers.microsoft.com/global/en/job/1864369/Software-Quality-Engineer-Intern%3A-Internship-Opportunities---Redmond",
+    "locations": [
+      "Redmond, WA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Microsoft",
+    "title": "Software Quality Engineer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "aac60e9a-ef51-4823-892a-07e66a894a22",
+    "date_posted": 1756341243,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341256,
+    "url": "https://www.amazon.jobs/en/jobs/3066561/business-intelligence-engineer-internship-2026-us",
+    "locations": [
+      "Seattle, WA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Amazon",
+    "title": "Business Intelligence Engineer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "15119166-1477-44f5-af87-01efe78e3fa6",
+    "date_posted": 1756341256,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341537,
+    "url": "https://www.amazon.jobs/en/jobs/3066625/data-engineer-internship-2026-us",
+    "locations": [
+      "Seattle, WA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Amazon",
+    "title": "Data Engineer Co-op Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "4fc9707b-90a1-41ba-955c-6ee9d067c222",
+    "date_posted": 1756341537,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341666,
+    "url": "https://www.amazon.jobs/en/jobs/3066439/front-end-engineer-internship-2026-us",
+    "locations": [
+      "Seattle, WA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Amazon",
+    "title": "Front-End Engineer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "32178424-4822-4b93-beed-67ac8d3f60cc",
+    "date_posted": 1756341666,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341692,
+    "url": "https://www.amazon.jobs/en/jobs/3066646/business-intelligence-engineer-co-op-2026-us",
+    "locations": [
+      "Seattle, WA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Amazon",
+    "title": "Business Intelligence Engineer Co-Op",
+    "season": "Winter",
+    "source": "aprameyak",
+    "id": "46fbb9cb-7a88-410b-93f5-eb316fd423ea",
+    "date_posted": 1756341692,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341724,
+    "url": "https://haier.wd3.myworkdayjobs.com/ge_appliances/job/USA-Louisville-KY/Software-Engineering-Co-op-Fall-2026_REQ-23563",
+    "locations": [
+      "Louisville, KY"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "GE",
+    "title": "Software Engineering Co-op - Fall 2026",
+    "season": "Fall",
+    "source": "aprameyak",
+    "id": "aca6b440-a8c9-4549-8735-78f4196c73d4",
+    "date_posted": 1756341724,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341741,
+    "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/305901?utm_medium=jobboard",
+    "locations": [
+      "Redwood City, CA",
+      "Santa Clara, CA",
+      "Pleasanton, CA"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Oracle",
+    "title": "Software Engineer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "0289b736-5a9d-4545-a5ad-f2caa0afc251",
+    "date_posted": 1756341741,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756341774,
+    "url": "https://jobs.cisco.com/jobs/ProjectDetail/Consulting-Engineer-I-Intern-United-States/1448044",
+    "locations": [
+      "Research Triangle Park, NC"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Cisco",
+    "title": "Consulting Engineer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "852d5048-4a9a-42dd-bca3-60387ca171ab",
+    "date_posted": 1756341774,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756397240,
+    "url": "https://geico.wd1.myworkdayjobs.com/en-US/External/job/TDP-Software-Intern_R0059640",
+    "locations": [
+      "Chevy Chase, MD",
+      "Virginia Beach, VA",
+      "Getzville, NY",
+      "Poway, CA",
+      "Richardson, TX",
+      "Renton, WA",
+      "North Liberty, IA",
+      "Katy, TX",
+      "Marlton, NJ",
+      "Lakeland, FL",
+      "Fredericksburg, VA",
+      "Lenexa, KS",
+      "Anchorage, AK",
+      "Woodbury, NY",
+      "Jacksonville, FL",
+      "Indianapolis, IN",
+      "Tucson, AZ",
+      "Macon, GA",
+      "Springfield, VA"
+    ],
+    "sponsorship": "Other",
+    "active": false,
+    "company_name": "Geico",
+    "title": "TDP Software Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "07f58a2b-14da-4442-83f8-14b6d51adb11",
+    "date_posted": 1756341787,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756344725,
+    "url": "https://www.janestreet.com/join-jane-street/position/8069279002",
+    "locations": [
+      "New York, NY"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Jane Street",
+    "title": "Cybersecurity Analyst Intern",
+    "season": "Summer",
+    "source": "XaJason",
+    "id": "a84de1d1-f1a7-4915-8f49-9baab585a183",
+    "date_posted": 1756344725,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756347498,
+    "url": "https://jobs.ashbyhq.com/Commure-Athelas/566a84fb-d93e-4177-ac07-3c16d3ae8e8d",
+    "locations": [
+      "Mountain View, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Commure",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "d3b69af9-e44e-4166-a9da-560c800e4dbe",
+    "date_posted": 1756347498,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347506,
+    "url": "https://careers.qorvo.com/job/Greensboro-Software-Developer-Intern-NC-27409/1320964700/",
+    "locations": [
+      "Greensboro, NC"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Qorvo",
+    "title": "Software Developer Intern",
+    "source": "vanshb03",
+    "id": "a1863126-26c1-4458-bfb8-d8f469577f47",
+    "date_posted": 1756347506,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347510,
+    "url": "https://ekkh.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2002/job/30545",
+    "locations": [
+      "Austin, MN"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Hormel Foods",
+    "title": "IT Application Development Analyst Intern",
+    "source": "vanshb03",
+    "id": "c160a304-126b-4337-a43f-601d6e118e53",
+    "date_posted": 1756347510,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347515,
+    "url": "https://burnsmcd.jobs/kansas-city-mo/software-developer-intern-kansas-city/89D63A85530C4FD8ADFC3AC4DC580A93/job/",
+    "locations": [
+      "Kansas City, MO"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Burns & McDonnell",
+    "title": "Software Developer Intern, Kansas City",
+    "source": "vanshb03",
+    "id": "c7e52508-9609-4995-83b6-e191ae9a0e49",
+    "date_posted": 1756347515,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347521,
+    "url": "https://cognex.wd1.myworkdayjobs.com/en-US/External_Career_Site/job/Wauwatosa-Wisconsin/Software-Engineering-Intern_R0010384-1",
+    "locations": [
+      "Wauwatosa, WI"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Cognex",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "9cddf080-c924-401f-a793-8751798ec843",
+    "date_posted": 1756347521,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347526,
+    "url": "https://newrez.wd1.myworkdayjobs.com/en-US/NRZ/job/TX-Coppell/XMLNAME-2026-Summer-Internship---Software-Engineering_R8395",
+    "locations": [
+      "Coppell, TX"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Newrez LLC",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "615256c7-5176-446b-bf99-403ac89015cd",
+    "date_posted": 1756347526,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347571,
+    "url": "https://analogdevices.wd1.myworkdayjobs.com/en-US/External/job/US-MA-Boston/Embedded-Software-Intern_R255237",
+    "locations": [
+      "Boston, MA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Analog Devices",
+    "title": "Embedded Software Intern, Analog Garage PST",
+    "source": "vanshb03",
+    "id": "76b9b833-5f7d-43a7-bc44-0fbd06464821",
+    "date_posted": 1756347571,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347589,
+    "url": "https://cgi.njoyn.com/corp/xweb/xweb.asp?clid=21001&page=jobdetails&jobid=J0825-1620",
+    "locations": [
+      "St. Louis, MO"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "CGI",
+    "title": "Software Developer Intern",
+    "source": "vanshb03",
+    "id": "5e53e2e4-6b29-4715-99a0-69e98abc8f92",
+    "date_posted": 1756347589,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347595,
+    "url": "https://lifeattiktok.com/search/7540823148805032210",
+    "locations": [
+      "Seattle, WA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "TikTok",
+    "title": "Software Engineer Intern, AI Applications",
+    "source": "vanshb03",
+    "id": "9b1d4247-336c-4293-969c-520747cf9fb4",
+    "date_posted": 1756347595,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756347603,
+    "url": "https://myjobs.adp.com/bessemer/cx/job-details?reqId=5001145764006",
+    "locations": [
+      "Woodbridge, NJ"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Bessemer Trust",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "03000237-b5ec-4647-9d4e-50476e9ee83d",
+    "date_posted": 1756347603,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347627,
+    "url": "https://careers.kodak.com/job/USA-Web-Developer-Intern-CA/1320436300/",
+    "locations": [
+      "United States"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Kodak",
+    "title": "Web Developer Intern",
+    "source": "vanshb03",
+    "id": "b74c1a7b-cb65-4177-b21a-8d74cda144b3",
+    "date_posted": 1756347627,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347704,
+    "url": "https://recruiting2.ultipro.com/KIN1010KNGL/JobBoard/f915a6d0-9b98-4b5e-992b-83828a3d66d6/OpportunityDetail?opportunityId=f6072d74-9ed1-4eab-9525-8b0551691787",
+    "locations": [
+      "Ames, IA",
+      "Clear Lake, IA",
+      "Fort Myers, FL"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Kingland",
+    "title": "Advanced Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "d3b7574e-a442-4ca6-a4e5-a8809d960029",
+    "date_posted": 1756347704,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756347737,
+    "url": "https://www.epicgames.com/site/en-US/careers/jobs/5623220004",
+    "locations": [
+      "Cary, NC"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Epic Games",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "0c60e87f-4e12-4124-84bc-1d7777a3e629",
+    "date_posted": 1756347737,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756354273,
+    "url": "https://careers.oracle.com/en/sites/jobsearch/job/306078/",
+    "locations": [
+      "Redwood Shores, CA"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Oracle",
+    "title": "Software Engineer Intern, Database Technologies",
+    "source": "vanshb03",
+    "id": "bc8ce9d2-fb7e-4831-920e-f3c773a254c4",
+    "date_posted": 1756354273,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756354278,
+    "url": "https://careers.oracle.com/en/sites/jobsearch/job/305997/",
+    "locations": [
+      "Austin, TX",
+      "Nashville, TN",
+      "Santa Clara, CA",
+      "Seattle, WA"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Oracle",
+    "title": "Technical Program Manager Intern, Oracle Cloud Infrastructure",
+    "source": "vanshb03",
+    "id": "dba741b4-79ea-425c-a47a-3d664f72e5c1",
+    "date_posted": 1756354278,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756354285,
+    "url": "https://careers.oracle.com/en/sites/jobsearch/job/306133/",
+    "locations": [
+      "Redwood City, CA",
+      "Santa Clara, CA",
+      "Pleasanton, CA",
+      "Seattle, WA",
+      "Kansas City, MO"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Oracle",
+    "title": "Software Engineer Intern, Oracle Health and Analytics",
+    "source": "vanshb03",
+    "id": "d80c357f-c657-442b-8c83-a27ec019485a",
+    "date_posted": 1756354285,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756354373,
+    "url": "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/job/305996/?location=United+States&locationId=300000000149325&selectedFlexFieldsFacets=%22AttributeChar16%7CInternSoftware%22",
+    "locations": [
+      "Seattle, WA"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Oracle",
+    "title": "Software Engineer Intern, Oracle Cloud Infrastructure (OCI)",
+    "source": "vanshb03",
+    "id": "ee4ef44e-d59a-4627-a4b7-8f6600e4c969",
+    "date_posted": 1756354373,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756355525,
+    "url": "https://ehzq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/112823",
+    "locations": [
+      "Chicago, IL"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Grant Thornton",
+    "title": "Technology Modernization Intern",
+    "source": "vanshb03",
+    "id": "a0659cc5-b615-41ee-bee2-126393f9d388",
+    "date_posted": 1756355525,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756355530,
+    "url": "https://careers.sharkninja.com/job/-/-/47204/85447396832",
+    "locations": [
+      "Needham, MA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "SharkNinja",
+    "title": "System Quality Assurance Co-op, Robots",
+    "source": "vanshb03",
+    "id": "2aea6480-7c33-4c43-bc5c-5951bf7143d4",
+    "date_posted": 1756355530,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Spring"
+  },
+  {
+    "date_updated": 1756355536,
+    "url": "https://careers.sharkninja.com/job/-/-/47204/85447395184",
+    "locations": [
+      "Needham, MA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "SharkNinja",
+    "title": "Mobile App Developer Co-op",
+    "source": "vanshb03",
+    "id": "d7944e69-ebb4-4895-aaf4-ab1e1b423049",
+    "date_posted": 1756355536,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Spring"
+  },
+  {
+    "date_updated": 1756355541,
+    "url": "https://careers.sharkninja.com/job/-/-/47204/85447396384",
+    "locations": [
+      "Madison, TN"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "SharkNinja",
+    "title": "Software Engineering Co-op",
+    "source": "vanshb03",
+    "id": "388253e9-b20d-426f-b701-2c8a62127164",
+    "date_posted": 1756355541,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Spring"
+  },
+  {
+    "date_updated": 1756355682,
+    "url": "https://careers.oracle.com/en/sites/jobsearch/job/306097/?keyword=Intern&mode=location",
+    "locations": [
+      "Seattle, WA",
+      "Redwood City, CA",
+      "Santa Clara, CA",
+      "Pleasanton, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Oracle",
+    "title": "Advanced Degree Software Engineer Intern, Oracle Health & Analytics",
+    "source": "vanshb03",
+    "id": "59b3b82c-fb31-44ed-b4b6-d6d1b1579131",
+    "date_posted": 1756355682,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756355690,
+    "url": "https://careers.oracle.com/en/sites/jobsearch/job/305903/?keyword=Intern&mode=location",
+    "locations": [
+      "Redwood City, CA",
+      "Pleasanton, CA",
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Oracle",
+    "title": "Advanced Degree Software Engineer Intern, Fusion",
+    "source": "vanshb03",
+    "id": "639b90e8-0cc6-4f4d-9441-2c7825dee43d",
+    "date_posted": 1756355690,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756355694,
+    "url": "https://careers.oracle.com/en/sites/jobsearch/job/306080/?keyword=Intern&lastSelectedFacet=AttributeChar4&mode=location",
+    "locations": [
+      "Redwood Shores, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Oracle",
+    "title": "Advanced Degree Software Engineer Intern, Database Technologies",
+    "source": "vanshb03",
+    "id": "ddfd44f5-48f9-42aa-b4a6-d704553caf0b",
+    "date_posted": 1756355694,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756396712,
+    "url": "https://careers.garmin.com/jobs/16829?lang=en-us",
+    "locations": [
+      "Olathe, KS"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Garmin",
+    "title": "Software Engineer Intern, Web/DevOps",
+    "source": "vanshb03",
+    "id": "9870e56f-7208-4b8c-b12c-0f7e911bc167",
+    "date_posted": 1756396712,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756396717,
+    "url": "https://careers.garmin.com/jobs/16828/job",
+    "locations": [
+      "Olathe, KS"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Garmin",
+    "title": "Software Engineer Intern, Embedded",
+    "source": "vanshb03",
+    "id": "f876b8f7-2e3f-4b81-987d-caca09db5e62",
+    "date_posted": 1756396717,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756513804,
+    "url": "https://mantech.avature.net/en_US/careers/JobDetail/39666",
+    "locations": [
+      "San Antonio, TX"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": false,
+    "company_name": "Mantech",
+    "title": "CNO Developer Intern",
+    "source": "vanshb03",
+    "id": "18b9d3f5-c671-4c1f-ade8-129eb7c2b4fa",
+    "date_posted": 1756396814,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756396818,
+    "url": "https://elanco.wd5.myworkdayjobs.com/External_Career/job/US-Territory-Field-based/IT-Junior-Engineer---Technical-Deliver-Intern--Summer-2026-_R0023201",
+    "locations": [
+      "US Territory Field based"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Elanco",
+    "title": "IT Junior Engineer Intern, Technical Deliver",
+    "source": "vanshb03",
+    "id": "10cfa10e-1479-4092-9d3a-f7a06b1bf906",
+    "date_posted": 1756396818,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756396837,
+    "url": "https://careers-aluminumdynamics.icims.com/jobs/6351/job",
+    "locations": [
+      "Columbus, MS"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Aluminum Dynamics",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "b115d1f3-252d-4215-90f0-62845e7c8e4b",
+    "date_posted": 1756396837,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756396990,
+    "url": "https://www.workatastartup.com/jobs/79941",
+    "locations": [
+      "Mountain View, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Silimate",
+    "title": "EDA QA/Testing Intern",
+    "source": "vanshb03",
+    "id": "d55b0006-ab5d-449a-a94b-63f5ba13d130",
+    "date_posted": 1756396990,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397083,
+    "url": "https://www.workatastartup.com/jobs/80699",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Cuckoo Labs",
+    "title": "Full Stack Engineering Intern",
+    "source": "vanshb03",
+    "id": "53dbf255-8371-4bdd-b0ff-b0599e0e45c1",
+    "date_posted": 1756397083,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397233,
+    "url": "https://www.workatastartup.com/jobs/80681",
+    "locations": [
+      "San Francisco, CA",
+      "Mountain View, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Athelas",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "3ccd48d2-533d-4aaa-9a48-3558ac2ba49d",
+    "date_posted": 1756397233,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397238,
+    "url": "https://www.workatastartup.com/jobs/80610",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Ember",
+    "title": "Full Stack Engineering Intern",
+    "source": "vanshb03",
+    "id": "2ccca119-cd00-4cf7-b2f3-de3edf595255",
+    "date_posted": 1756397238,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397242,
+    "url": "https://www.workatastartup.com/jobs/80597",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Mesh",
+    "title": "AI Engineer Intern",
+    "source": "vanshb03",
+    "id": "3bf133e0-3718-4089-ba6d-6dccc6b4534d",
+    "date_posted": 1756397242,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397246,
+    "url": "https://www.workatastartup.com/jobs/80596",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Bild AI",
+    "title": "AI/SWE Intern",
+    "source": "vanshb03",
+    "id": "c874cd7a-b36e-4dc9-b0c8-d212218028e6",
+    "date_posted": 1756397246,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397250,
+    "url": "https://www.workatastartup.com/jobs/80570",
+    "locations": [
+      "San Francisco, CA",
+      "Remote"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Relixir",
+    "title": "Forward Deployed Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "2ab93cfa-543f-407e-b3d0-18f6d728c370",
+    "date_posted": 1756397250,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397290,
+    "url": "https://www.workatastartup.com/jobs/80569",
+    "locations": [
+      "San Francisco, CA",
+      "Remote"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Relixir (X25)",
+    "title": "Software Engineer Intern, Backend & AI",
+    "source": "vanshb03",
+    "id": "ccbd003a-0786-419a-959e-c8cdd3389393",
+    "date_posted": 1756397290,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397295,
+    "url": "https://www.workatastartup.com/jobs/80560",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "FleetWorks",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "f481d00c-eb14-4dc5-b016-94ac3cc4f7d7",
+    "date_posted": 1756397295,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397304,
+    "url": "https://www.workatastartup.com/jobs/80559",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Fresco (F24)",
+    "title": "AI SWE Intern, Fleet Health Instrumentation",
+    "source": "vanshb03",
+    "id": "3933bdec-6edf-434f-b7f0-93f3f9c056bd",
+    "date_posted": 1756397304,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397308,
+    "url": "https://www.workatastartup.com/jobs/80519",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Sonauto",
+    "title": "ML Engineer Intern, Research",
+    "source": "vanshb03",
+    "id": "b2bd269f-ecf8-40aa-8157-77bdb4962828",
+    "date_posted": 1756397308,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397312,
+    "url": "https://www.workatastartup.com/jobs/80518",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Tandem (S24)",
+    "title": "Eng Intern",
+    "source": "vanshb03",
+    "id": "018beaed-7f7b-4988-82c0-0e4d20a5f085",
+    "date_posted": 1756397312,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397317,
+    "url": "https://www.workatastartup.com/jobs/80513",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "CTGT",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "dc3d317b-955a-4870-b58d-d56d3036ca78",
+    "date_posted": 1756397317,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397322,
+    "url": "https://www.workatastartup.com/jobs/80462",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "Readily (S23)",
+    "title": "Full-Stack Engineering Intern",
+    "source": "vanshb03",
+    "id": "c9146c9b-70a1-4ac6-b439-4e394a3dd6dc",
+    "date_posted": 1756397322,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397327,
+    "url": "https://www.workatastartup.com/jobs/80456",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Conductor Quantum",
+    "title": "Intern",
+    "source": "vanshb03",
+    "id": "19f94803-3385-41c0-9f78-a30fdee821d2",
+    "date_posted": 1756397327,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397334,
+    "url": "https://www.workatastartup.com/jobs/80438",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Candle",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "bc577e9a-f176-4eb7-8075-41448f72e19c",
+    "date_posted": 1756397334,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397338,
+    "url": "https://www.workatastartup.com/jobs/80435",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Promptless",
+    "title": "AI Engineering Intern",
+    "source": "vanshb03",
+    "id": "e650f7ae-17fd-47ef-8b4f-6ea593382663",
+    "date_posted": 1756397338,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397342,
+    "url": "https://www.workatastartup.com/jobs/80434",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Promptless",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "563e8b32-a14e-44e0-b5c6-34991af94206",
+    "date_posted": 1756397342,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397350,
+    "url": "https://www.workatastartup.com/jobs/80433",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "Circleback",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "c793c90b-180b-43fd-b35b-a06f2ccbeaa5",
+    "date_posted": 1756397350,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397395,
+    "url": "https://www.workatastartup.com/jobs/80430",
+    "locations": [
+      "San Francisco, CA",
+      "Los Angeles, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Reacher",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "161da56d-6ac4-440a-aa7f-4143b2bdb60b",
+    "date_posted": 1756397395,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397398,
+    "url": "https://www.workatastartup.com/jobs/80429",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Everest (F25)",
+    "title": "Engineering Intern",
+    "source": "vanshb03",
+    "id": "c5301694-d454-4eaa-b62d-d080e83ad27e",
+    "date_posted": 1756397398,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Spring"
+  },
+  {
+    "date_updated": 1756397401,
+    "url": "https://www.workatastartup.com/jobs/80394",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "CreativeMode",
+    "title": "SWE Intern",
+    "source": "vanshb03",
+    "id": "8269b175-94bb-40a4-b135-5d57faddc63a",
+    "date_posted": 1756397401,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397406,
+    "url": "https://www.workatastartup.com/jobs/80387",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Waypoint Transit",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "eeede127-f5e1-4468-93e0-ec2548723461",
+    "date_posted": 1756397406,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397411,
+    "url": "https://www.workatastartup.com/jobs/80386",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Corgi",
+    "title": "Technical Builder Intern",
+    "source": "vanshb03",
+    "id": "f863f4ac-7347-4364-b3fb-062a80b0c6cb",
+    "date_posted": 1756397411,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397415,
+    "url": "https://www.workatastartup.com/jobs/80381",
+    "locations": [
+      "New York, NY"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "Garage (W24)",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "fd927d0a-6b94-4e7e-93e2-f7595a662966",
+    "date_posted": 1756397415,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397419,
+    "url": "https://www.workatastartup.com/jobs/80380",
+    "locations": [
+      "Remote"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Upsolve",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "9c901d29-dd6b-4b53-8800-c2ee2f39428b",
+    "date_posted": 1756397419,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397424,
+    "url": "https://www.workatastartup.com/jobs/80350",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Stack Auth",
+    "title": "SWE Intern",
+    "source": "vanshb03",
+    "id": "f6893fd3-f89e-4dc3-b0b8-671005bf150a",
+    "date_posted": 1756397424,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397435,
+    "url": "https://www.workatastartup.com/jobs/80342",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Cekura",
+    "title": "AI Engineer Intern, Voice AI and Chat AI agents: Testing and Observability",
+    "source": "vanshb03",
+    "id": "f221c503-ab0c-4be4-a6bc-3585f497446b",
+    "date_posted": 1756397435,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397441,
+    "url": "https://www.workatastartup.com/jobs/79783",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Cua (X25)",
+    "title": "Software Engineer Intern, Infra & Agent Systems",
+    "source": "vanshb03",
+    "id": "f13a1c55-266b-4c7e-a6bb-cbaef4201bf0",
+    "date_posted": 1756397441,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397446,
+    "url": "https://www.workatastartup.com/jobs/78742",
+    "locations": [
+      "San Francisco, CA",
+      "Remote"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Cua (X25)",
+    "title": "Research Intern",
+    "source": "vanshb03",
+    "id": "381c71c4-6015-4e67-884e-99ae3de0a9d9",
+    "date_posted": 1756397446,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397451,
+    "url": "https://www.workatastartup.com/jobs/79734",
+    "locations": [
+      "Los Angeles, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Yondu (W24)",
+    "title": "Computer Vision Intern, Co-Op",
+    "source": "vanshb03",
+    "id": "721c80fe-4390-4d35-b948-13ae8eb0c2ff",
+    "date_posted": 1756397451,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756397455,
+    "url": "https://www.workatastartup.com/jobs/79250",
+    "locations": [
+      "San Francisco, CA",
+      "Remote"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Morph",
+    "title": "Machine Learning Intern",
+    "source": "vanshb03",
+    "id": "da98ceb4-d9fd-4c52-a922-9f8a2be957af",
+    "date_posted": 1756397455,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397460,
+    "url": "https://www.workatastartup.com/jobs/79000",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Vendra",
+    "title": "Full Stack ML Engineering Intern",
+    "source": "vanshb03",
+    "id": "91c7a409-4b33-4cde-b1f1-7a579c5d1b4c",
+    "date_posted": 1756397460,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397464,
+    "url": "https://www.workatastartup.com/jobs/78999",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Vendra",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "06bba84c-48ee-4b94-9cb6-3dab16463d9f",
+    "date_posted": 1756397464,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397468,
+    "url": "https://www.workatastartup.com/jobs/78951",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Nowadays (S23)",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "dfe1d354-9d08-4a56-accc-6dabc2773696",
+    "date_posted": 1756397468,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756397472,
+    "url": "https://www.workatastartup.com/jobs/78952",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Nowadays (S23)",
+    "title": "Product Engineer Intern",
+    "source": "vanshb03",
+    "id": "b6f8d8b6-d722-4cf4-b2d2-d9f05203fe08",
+    "date_posted": 1756397472,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756397555,
+    "url": "https://www.workatastartup.com/jobs/78815",
+    "locations": [
+      "San Francisco, CA",
+      "Remote"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Orchids",
+    "title": "Full Stack Engineer Intern",
+    "source": "vanshb03",
+    "id": "cf33e291-9525-4472-ba93-9ed10dc4dc5c",
+    "date_posted": 1756397555,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397559,
+    "url": "https://www.workatastartup.com/jobs/78721",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "BrowserOS",
+    "title": "ML Research Engineer Intern",
+    "source": "vanshb03",
+    "id": "ba7025c0-fc66-4059-9859-b9b1d174ec2c",
+    "date_posted": 1756397559,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397563,
+    "url": "https://www.workatastartup.com/jobs/78634",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Bluejay",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "289f758c-b284-474d-ac8a-2e29d8444c60",
+    "date_posted": 1756397563,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397567,
+    "url": "https://www.workatastartup.com/jobs/78042",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "ZeroEntropy",
+    "title": "Machine Learning Engineering Intern",
+    "source": "vanshb03",
+    "id": "e028890b-c346-4796-b113-f7adafa30772",
+    "date_posted": 1756397567,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756397571,
+    "url": "https://www.workatastartup.com/jobs/77795",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Bindwell (W25)",
+    "title": "Machine Learning Intern",
+    "source": "vanshb03",
+    "id": "3c1b42c4-1f3b-4326-959d-987f7adbf129",
+    "date_posted": 1756397571,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397575,
+    "url": "https://www.workatastartup.com/jobs/77048",
+    "locations": [
+      "New York, NY"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Anvil (X25)",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "878dcc97-abca-48de-add3-783571c1c6af",
+    "date_posted": 1756397575,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756397579,
+    "url": "https://www.workatastartup.com/jobs/76804",
+    "locations": [
+      "San Francisco, CA",
+      "Remote"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "vly.ai",
+    "title": "Frontend Engineering Intern",
+    "source": "vanshb03",
+    "id": "be4d73e0-6974-40e2-a94b-ec70343c999a",
+    "date_posted": 1756397579,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756397583,
+    "url": "https://www.workatastartup.com/jobs/76805",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "vly.ai",
+    "title": "Full-Stack + Applied AI Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "0e5b823b-eec5-4d0d-8372-32f33fa0da8a",
+    "date_posted": 1756397583,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756397586,
+    "url": "https://www.workatastartup.com/jobs/76659",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "ThirdLayer",
+    "title": "Full-Stack Engineer Intern",
+    "source": "vanshb03",
+    "id": "9c6e87f5-ff2e-4bfb-aab0-54830ac21ad3",
+    "date_posted": 1756397586,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397590,
+    "url": "https://www.workatastartup.com/jobs/75700",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Mosaic",
+    "title": "Full Stack Engineering Intern",
+    "source": "vanshb03",
+    "id": "2a44ce2f-756e-4754-aded-34c8111107e3",
+    "date_posted": 1756397590,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756397615,
+    "url": "https://www.workatastartup.com/jobs/75582",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "Domu Technology Inc.",
+    "title": "Engineering Intern",
+    "source": "vanshb03",
+    "id": "a28629cb-e758-470d-9d22-0ea945914305",
+    "date_posted": 1756397615,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756397634,
+    "url": "https://www.workatastartup.com/jobs/75639",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "14.ai",
+    "title": "Full Stack Engineering Intern",
+    "source": "vanshb03",
+    "id": "251de51c-0c4b-48c3-bf5e-dc1efc518a37",
+    "date_posted": 1756397634,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756401768,
+    "url": "https://db.recsolu.com/external/requisitions/DgVKlwNjlhY8M4_JOkMEnw",
+    "locations": [
+      "Cary, NC"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Deutsche Bank",
+    "title": "Technology, Data and Innovation Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "40c2e232-c50c-4dd7-8df3-94b819f356fb",
+    "date_posted": 1756401768,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756401787,
+    "url": "https://db.recsolu.com/external/requisitions/Bw7mjFK6IZkEJB1Wtse0YA",
+    "locations": [
+      "New York, NY"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Deutsche Bank",
+    "title": "Technology, Data and Innovation Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "75084653-baa3-477f-8074-f6fcc8b6e605",
+    "date_posted": 1756401787,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756459611,
+    "url": "https://www.santandercareers.com/job/-/-/1771/85497363568?fbclid=PAZXh0bgNhZW0CMTEAAacIhtTqz01AOmxbttDIs7PaCLVvt_GRxTj5XLrS3GVAf0TaqIjwdMD23UYekg_aem_b_unyIxUc47fQBBj0CzErA",
+    "locations": [
+      "Dallas, TX",
+      "Boston, MA",
+      "New York, NY"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Santander",
+    "title": "Information Security Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "4c7d5d73-6022-41e4-abde-839c3bc37d97",
+    "date_posted": 1756459611,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756459654,
+    "url": "https://www.santandercareers.com/job/dallas/it-project-management-it-originations-intern/1771/85497363664",
+    "locations": [
+      "Dallas, TX"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Santander",
+    "title": "IT Project Management Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "0a713ca0-8adb-40e8-aa92-00b27a963a08",
+    "date_posted": 1756459654,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756508415,
+    "url": "https://draftkings.wd1.myworkdayjobs.com/Campus_Career_Portal/job/Boston-MA/Software-Engineer-Intern--Summer-2026-_JR12655",
+    "locations": [
+      "Boston, MA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "DraftKings",
+    "title": "Software Engineer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "fec41c46-42ad-45e6-b7a5-871071272764",
+    "date_posted": 1756508415,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756509518,
+    "url": "https://redhat.wd5.myworkdayjobs.com/en-US/jobs/details/Software-Engineer-Intern_R-050088?q=intern",
+    "locations": [
+      "Raleigh, NC",
+      "Boston, MA",
+      "Lowell, MA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Red Hat",
+    "title": "Software Engineer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "f0c6664d-3d68-410a-bb7c-51abc54eecf1",
+    "date_posted": 1756509518,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756509540,
+    "url": "https://job-boards.greenhouse.io/cloudflare/jobs/7206269",
+    "locations": [
+      "Austin, TX"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Cloudflare",
+    "title": "Software Engineering Intern",
+    "season": "Summer",
+    "source": "jaximus808",
+    "id": "752ad324-3547-4f54-97c0-39251be49cf2",
+    "date_posted": 1756509540,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756535088,
+    "url": "https://careers.appian.com/jobs/7201589-product-manager-intern",
+    "locations": [
+      "McLean, VA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Appian",
+    "title": "Product Manager Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "f3c2caf5-5f57-47f2-8bbb-f0907f44160b",
+    "date_posted": 1756535088,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756535102,
+    "url": "https://careers.appian.com/jobs/7201603-information-security-engineer",
+    "locations": [
+      "McLean, VA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Appian",
+    "title": "Information Security Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "1ca4977b-3049-4163-8657-ac2b2f3671ea",
+    "date_posted": 1756535102,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756535122,
+    "url": "https://job-boards.greenhouse.io/appian/jobs/7201615",
+    "locations": [
+      "McLean, VA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Appian",
+    "title": "Quality Engineer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "30dfe984-0cc8-487a-88bb-13ad50911227",
+    "date_posted": 1756535122,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756535351,
+    "url": "https://careers.appian.com/jobs/7201613-software-engineering-intern",
+    "locations": [
+      "McLean, VA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Appian",
+    "title": "Software Engineering Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "4c832b26-b3fd-4628-9d74-a6b7b8325758",
+    "date_posted": 1756535351,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756536806,
+    "url": "https://careers.boozallen.com/jobs/JobDetail?jobId=115072",
+    "locations": [
+      "Annapolis Junction, MD",
+      "Atlanta, GA",
+      "Charleston, SC",
+      "Colorado Springs, CO",
+      "El Segundo, CA",
+      "Honolulu, HI",
+      "Huntsville, AL",
+      "Panama City, FL",
+      "Rome, NY",
+      "San Diego, CA",
+      "McLean, VA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Booz Allen Hamilton",
+    "title": "University, 2026 Summer Games Cybersecurity Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "4cd1bc39-255c-4d81-888c-e41f08813217",
+    "date_posted": 1756536806,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756536818,
+    "url": "https://careers.boozallen.com/jobs/JobDetail?jobId=115069",
+    "locations": [
+      "Annapolis Junction, MD",
+      "Atlanta, GA",
+      "Charleston, SC",
+      "Colorado Springs, CO",
+      "El Segundo, CA",
+      "Honolulu, HI",
+      "Huntsville, AL",
+      "Panama City, FL",
+      "Rome, NY",
+      "San Diego, CA",
+      "McLean, VA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Booz Allen Hamilton",
+    "title": "University, 2026 Summer Games Software Developer Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "84aeee05-0cdf-4ef5-8a6e-ba87fc66ed36",
+    "date_posted": 1756536818,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756536833,
+    "url": "https://careers.amd.com/careers-home/jobs/70483?lang=en-us",
+    "locations": [
+      "Austin ,TX",
+      "Fort Collins, CO",
+      "Longmont, CO",
+      "Boxborough , MA"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "AMD",
+    "title": "Software Engineer Intern",
+    "season": "Summer",
+    "source": "EricSal2004",
+    "id": "e8d2ac97-467b-413d-a1c1-194dabff0907",
+    "date_posted": 1756536833,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756537559,
+    "url": "https://fa-evdq-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/9298",
+    "locations": [
+      "Saint Paul, MN"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Computershare",
+    "title": "Junior Developer Intern",
+    "source": "vanshb03",
+    "id": "7bbc4e48-8fd7-4d7b-9fe1-147f22ed0408",
+    "date_posted": 1756537559,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756537573,
+    "url": "https://job-boards.greenhouse.io/descriptinc/jobs/6671019003",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Descript",
+    "title": "SWE Intern",
+    "source": "vanshb03",
+    "id": "e9a1a7f7-d816-45de-9f0c-0b76e1084798",
+    "date_posted": 1756537573,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Spring"
+  },
+  {
+    "date_updated": 1756537699,
+    "url": "https://altruist.com/join-altruist/",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Altruist Financial LLC",
+    "title": "Quantitative Engineer Intern",
+    "source": "vanshb03",
+    "id": "a2367266-8373-4dc7-91fa-4440b07c3f21",
+    "date_posted": 1756537699,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756537801,
+    "url": "https://www.workatastartup.com/jobs/80749",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "SubImage - YC(W25)",
+    "title": "Full Stack Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "03154584-bee6-4d45-bb29-1b6ddf44a246",
+    "date_posted": 1756537801,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756537810,
+    "url": "https://www.workatastartup.com/jobs/80751",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "ThirdLayer- YC(W25)",
+    "title": "Full-Stack Engineer Intern",
+    "source": "vanshb03",
+    "id": "f0ac6369-7db2-488a-a9ac-e0b1e7089046",
+    "date_posted": 1756537810,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756537816,
+    "url": "https://www.workatastartup.com/jobs/80757",
+    "locations": [
+      "San Francisco, CA"
+    ],
+    "sponsorship": "Offers Sponsorship",
+    "active": true,
+    "company_name": "YouLearn - YC",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "23278953-27ca-4cac-a7e8-725d395cb64a",
+    "date_posted": 1756537816,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756538022,
+    "url": "https://careers.sig.com/job/9749/Trading-System-Engineering-Internship-Summer-2026",
+    "locations": [
+      "Bala Cynwyd, PA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Susquehanna",
+    "title": "Trading System Engineering Intern",
+    "source": "vanshb03",
+    "id": "760d46a7-5580-474c-bbe1-2a1a8d886d01",
+    "date_posted": 1756538022,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756538029,
+    "url": "https://careers.caci.com/global/en/job/CACIGLOBAL316652EXTERNALENGLOBAL/Software-Quality-Engineer-Intern-Summer-2026",
+    "locations": [
+      "Austin, TX"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "CACI",
+    "title": "Software Quality Engineer Intern",
+    "source": "vanshb03",
+    "id": "396384a1-4228-43ff-84cf-92f32b433506",
+    "date_posted": 1756538029,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756538036,
+    "url": "https://dowjones.jobs/gaithersburg-md/summer-2026-internship-opis-software-development-intern/747839E0165045449869A77FCB5233B1/job/",
+    "locations": [
+      "Gaithersburg, MD"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Dow Jones",
+    "title": "Software Development Intern, OPIS",
+    "source": "vanshb03",
+    "id": "51f871f8-f5e6-41d1-9601-34ff3cf78219",
+    "date_posted": 1756538036,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756538041,
+    "url": "https://careers.caci.com/global/en/job/CACIGLOBAL316653EXTERNALENGLOBAL/Software-Engineer-Intern-Summer-2026",
+    "locations": [
+      "Austin, TX"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "CACI",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "0209f19d-1eb2-454b-a932-01635b117105",
+    "date_posted": 1756538041,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756538047,
+    "url": "https://recruiting.paylocity.com/recruiting/jobs/Details/3531297/Transcard-Payments-LLC/2026---Software-Engineer-Intern",
+    "locations": [
+      "Chattanooga, TN"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Transcard",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "21fec700-d1c3-4474-b410-c2ef7a69abbd",
+    "date_posted": 1756538047,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756538051,
+    "url": "https://www.schwabjobs.com/job/southlake/2026-charles-schwab-technology-intern-software-engineering/33727/",
+    "locations": [
+      "Southlake, TX",
+      "Austin, TX",
+      "Westlake, TX",
+      "Ann Arbor, MI",
+      "Indianapolis, IN"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Charles Schwab",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "a4568c49-cfb8-4ae9-9b8b-9700e36b1939",
+    "date_posted": 1756538051,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756538056,
+    "url": "https://www.tesla.com/careers/search/job/248001",
+    "locations": [
+      "Fremont, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Tesla",
+    "title": "Software Engineer Intern, Factory Software",
+    "source": "vanshb03",
+    "id": "14a6bbc2-315f-4165-83eb-40fefb6d95a7",
+    "date_posted": 1756538056,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Winter"
+  },
+  {
+    "date_updated": 1756538062,
+    "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/113405",
+    "locations": [
+      "United States"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "Honeywell",
+    "title": "Software Engineer & Computer Science Intern",
+    "source": "vanshb03",
+    "id": "aa6e3dd8-00f8-4075-bc8a-29a31df9f662",
+    "date_posted": 1756538062,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756602556,
+    "url": "https://www.schwabjobs.com/job/southlake/2026-charles-schwab-technology-intern-software-engineering/33727/85564474864",
+    "locations": [
+      "Southlake, TX",
+      "Austin, TX",
+      "Westlake, TX",
+      "Ann Arbor, MI",
+      "Indianapolis, IN"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Charles Schwab",
+    "title": "Software Engineering Intern",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "2a83b8e6-f1f0-497f-a976-a6d509a912ae",
+    "date_posted": 1756602556,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756602621,
+    "url": "https://careers.inspirebrands.com/infrastructure-and-devops-internship-summer-2026/job/44E0457CE423184B5723F5EE9BCD637E",
+    "locations": [
+      "Atlanta, GA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Inspire",
+    "title": "Infrastructure and DevOps Intern",
+    "source": "vanshb03",
+    "id": "c6a0d9d0-4a09-4537-8396-f2b3badf765e",
+    "date_posted": 1756602621,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756602626,
+    "url": "https://www.santandercareers.com/job/-/-/1771/85580175488",
+    "locations": [
+      "Dallas, TX",
+      "Irvine, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Santander",
+    "title": "IT Application Development Intern",
+    "source": "vanshb03",
+    "id": "241d9ad7-f017-4b26-a826-07558a298b0b",
+    "date_posted": 1756602626,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756602632,
+    "url": "https://careers.amd.com/careers-home/jobs/70483/job",
+    "locations": [
+      "Austin, TX",
+      "Fort Collins, CO",
+      "Boxborough, MA",
+      "Longmont, CO"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "AMD",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "a975e138-0a9f-4ad9-a38c-39351490047b",
+    "date_posted": 1756602632,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756602644,
+    "url": "https://jobs.keysight.com/external/jobs/49350/job",
+    "locations": [
+      "Colorado Springs, CO"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Keysight",
+    "title": "DevOps Intern",
+    "source": "vanshb03",
+    "id": "a5ceb8a5-22c8-4079-824a-e7281df616c3",
+    "date_posted": 1756602644,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756602652,
+    "url": "https://www.santandercareers.com/job/-/-/1771/85568135264",
+    "locations": [
+      "Dallas, TX"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Santander",
+    "title": "Application Development Intern, Auto",
+    "source": "vanshb03",
+    "id": "5d4839f2-72ea-415a-9392-3715853248a1",
+    "date_posted": 1756602652,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756851501,
+    "url": "https://jobs.ubs.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=25008&siteid=5131&PageType=JobDetails&jobid=332561#jobDetails=332561_5131",
+    "locations": [
+      "Weekhawken, NJ"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "UBS",
+    "title": "Technology Inter",
+    "season": "Summer",
+    "source": "aprameyak",
+    "id": "10616bcb-cf95-4298-bf83-8ca7e23df30f",
+    "date_posted": 1756851501,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756851520,
+    "url": "https://intel.wd1.myworkdayjobs.com/en-US/External/details/Software-Engineering----Intern--Bachelor-s_JR0276773?workerSubType=dc8bf79476611087dfde99931439ae75&jobFamilyGroup=dc8bf79476611087d67b36517cf17036",
+    "locations": [
+      "Hillsboro, OR",
+      "Folsom, CA",
+      "Santa Clara, CA",
+      "Austin, TX",
+      "Phoenix, AZ"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Intel",
+    "title": "Software Engineer Intern",
+    "season": "Summer",
+    "source": "Shaunak-Sinha-05",
+    "id": "46acadfb-d89b-4511-aa57-80d86a740c52",
+    "date_posted": 1756851520,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756851613,
+    "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Summer-2026-Intern---Software-Engineer_JR308796-1",
+    "locations": [
+      "San Francisco, CA",
+      "Seattle, WA",
+      "Bellevue, WA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Salesforce",
+    "title": "Software Engineer Intern",
+    "season": "Summer",
+    "source": "Andy2887",
+    "id": "05a59559-72a8-4c34-a6c0-b0e1366af095",
+    "date_posted": 1756851613,
+    "company_url": "",
+    "is_visible": true
+  },
+  {
+    "date_updated": 1756866571,
+    "url": "https://jobs.baesystems.com/global/en/job/BAE1US115385BREXTERNAL/Software-Engineering-Intern-Summer-2026",
+    "locations": [
+      "San Diego, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "BAE Systems",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "0ef5b8ad-9ce8-4586-93a4-e05c4a65119d",
+    "date_posted": 1756866571,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866580,
+    "url": "https://careers.cai.io/us/en/job/CAICAIUSR6094EXTERNALENUS/Software-Developer-Intern",
+    "locations": [
+      "Remote"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "CAI",
+    "title": "Software Developer Intern",
+    "source": "vanshb03",
+    "id": "3f0a94f4-49a4-4bb6-9379-65bdb5b0e552",
+    "date_posted": 1756866580,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866584,
+    "url": "https://www.aptiv.com/en/jobs/search/open-positions/J000685611",
+    "locations": [
+      "Troy, MI"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Aptiv",
+    "title": "DevOps Intern",
+    "source": "vanshb03",
+    "id": "c810722b-2ae5-47f9-84be-f71ed02fd5a9",
+    "date_posted": 1756866584,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866630,
+    "url": "https://www.aptiv.com/en/jobs/search/open-positions/J000685610",
+    "locations": [
+      "Troy, MI"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Aptiv",
+    "title": "Software Test Engineering Intern, ASUX",
+    "source": "vanshb03",
+    "id": "1eea9466-e4a2-4e58-94a1-f1dee307a08c",
+    "date_posted": 1756866630,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866638,
+    "url": "https://brunswick.wd1.myworkdayjobs.com/en-US/search/job/Lowell-MI/Software-Engineering-Intern_JR-047427",
+    "locations": [
+      "Lowell, MI",
+      "Menomonee Falls, WI",
+      "Fond du Lac, WI",
+      "Mettawa, IL"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Brunswick",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "aa2d4873-e32a-4835-b10d-4c3bb0fbbbae",
+    "date_posted": 1756866638,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Spring"
+  },
+  {
+    "date_updated": 1756866647,
+    "url": "https://ntrs.wd1.myworkdayjobs.com/en-US/northerntrust/job/Chicago-IL/Technology-Intern---Software-Development_R146632-1",
+    "locations": [
+      "Chicago, IL"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Northern Trust",
+    "title": "Technology Intern, Software Development",
+    "source": "vanshb03",
+    "id": "dbb1df87-16de-40fb-ad85-d86b31fec949",
+    "date_posted": 1756866647,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866662,
+    "url": "https://careers.oshkoshcorp.com/us/en/job/OCNOCKUSR40813EXTERNALENUS/Engineer-Intern-Software-Summer-2026",
+    "locations": [
+      "Dodge Center, MN"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "McNeilus",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "bc3417f2-4d72-4dba-b72c-2a300f88088d",
+    "date_posted": 1756866662,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866713,
+    "url": "https://careers.oshkoshcorp.com/us/en/job/R40623/Engineer-Intern-Software-Summer-2026",
+    "locations": [
+      "Greenville, WI",
+      "Oshkosh, WI"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Pierce Manufacturing",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "5a86db83-9f7c-485c-b0be-addfa1551545",
+    "date_posted": 1756866713,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866894,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--PhD-Robotics-Research_JR2003245",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "PhD Robotics Research Intern",
+    "source": "vanshb03",
+    "id": "7e4a1d7b-0128-4ccc-bcaf-73a03599de31",
+    "date_posted": 1756866894,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866901,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--PhD-Large-Language-Models-Research_JR2003243",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "PhD Large Language Models Research Intern",
+    "source": "vanshb03",
+    "id": "1b7e3acb-832d-4276-9239-4afd39f3650d",
+    "date_posted": 1756866901,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866905,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--PhD-Hardware-Research_JR2003247",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "PhD Hardware Research Intern",
+    "source": "vanshb03",
+    "id": "59d2f738-c1e9-4236-a6c3-b5e4fe88027b",
+    "date_posted": 1756866905,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866909,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--PhD-Graphics-and-Simulation-Research_JR2003242",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "PhD Graphics and Simulation Research Intern",
+    "source": "vanshb03",
+    "id": "1e2d7b85-23be-4502-a20f-d46dab9ec67a",
+    "date_posted": 1756866909,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866914,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--PhD-Generative-AI-Research_JR2003228",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "PhD Generative AI Research Intern",
+    "source": "vanshb03",
+    "id": "e8b62c60-4794-4c29-8e9a-be26e97c93dd",
+    "date_posted": 1756866914,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866919,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--PhD-Computer-Vision-and-Deep-Learning-Research_JR2003241",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "PhD Computer Vision and Deep Learning Research Intern",
+    "source": "vanshb03",
+    "id": "f0ecdf67-9a71-4e1d-883a-7d49422b2f6b",
+    "date_posted": 1756866919,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866924,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--PhD-Computer-Architecture-and-Systems-Research_JR2003246",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "PhD Computer Architecture and Systems Research Intern",
+    "source": "vanshb03",
+    "id": "d442acba-67eb-4af2-876e-81198b1d1bd6",
+    "date_posted": 1756866924,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866929,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--PhD-Autonomous-Vehicles-Research_JR2003244?ittk=SWK2WUHSBD",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "PhD Autonomous Vehicles Research Intern",
+    "source": "vanshb03",
+    "id": "db525ee1-c273-4a2d-89b8-51f754770acb",
+    "date_posted": 1756866929,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866933,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Hardware-Physical-Design---VLSI_JR2003198",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Hardware Physical Design Intern, VLSI",
+    "source": "vanshb03",
+    "id": "7ba9e5af-5ed0-4182-995f-68a411aa5139",
+    "date_posted": 1756866933,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866937,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Mixed-Signal-Design-and-Digital-Circuit-Design_JR2003199",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Mixed Signal Design and Digital Circuit Design Intern",
+    "source": "vanshb03",
+    "id": "e18a9f86-07a0-4b8f-8e88-f4d907279912",
+    "date_posted": 1756866937,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866941,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Hardware-Verification-_JR2003197",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Hardware Verification Intern",
+    "source": "vanshb03",
+    "id": "97458f2e-9be8-4fed-93b6-65e53a95d519",
+    "date_posted": 1756866941,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866971,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Hardware-Engineering-_JR2003200",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Hardware Engineering Intern",
+    "source": "vanshb03",
+    "id": "e65d918a-a090-4876-8c6e-c7a21973ed44",
+    "date_posted": 1756866971,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866979,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Hardware-ASIC-Design-_JR2003195",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Hardware ASIC Design Intern",
+    "source": "vanshb03",
+    "id": "8a3e3187-9e07-4ba1-aaae-4d69abce97cf",
+    "date_posted": 1756866979,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866985,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Deep-Learning-Computer-Architecture_JR2003202",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Deep Learning Computer Architecture Intern",
+    "source": "vanshb03",
+    "id": "d497f45b-6eb8-46a8-a781-35fe86fca83c",
+    "date_posted": 1756866985,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866992,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Systems-Software-Engineering_JR2003204",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Systems Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "4e6586aa-4595-4824-92d8-089e4aa852ad",
+    "date_posted": 1756866992,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756866999,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Deep-Learning_JR2003208",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Deep Learning Intern",
+    "source": "vanshb03",
+    "id": "08060a65-169b-4f3c-96cf-c75b2338b4f9",
+    "date_posted": 1756866999,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756867004,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Autonomous-Vehicles-and-Robotics_JR2003207",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Autonomous Vehicles and Robotics Intern",
+    "source": "vanshb03",
+    "id": "c233aef3-b813-4036-a98f-02ebaed9e1b4",
+    "date_posted": 1756867004,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756867009,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Computer-Architecture_JR2003201-1",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Computer Architecture Intern",
+    "source": "vanshb03",
+    "id": "6bf46f3e-1c8e-40b6-9592-f6dbc31b16db",
+    "date_posted": 1756867009,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756867019,
+    "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/NVIDIA-2026-Internships--Software-Engineering-_JR2003206",
+    "locations": [
+      "Santa Clara, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "NVIDIA",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "b4796487-867a-439c-97ff-d6aae27f5b18",
+    "date_posted": 1756867019,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756869293,
+    "url": "https://mastercard.wd1.myworkdayjobs.com/CampusApplyOnly/job/OFallon-Missouri/Software-Engineer-Intern_R-257331",
+    "locations": [
+      "O'Fallon, MO",
+      "Atlanta, GA",
+      "Arlington, VA"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Mastercard",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "4f553623-52ad-42b6-bcc4-e92dbf0c1e9a",
+    "date_posted": 1756869293,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756869342,
+    "url": "https://stripe.com/jobs/listing/software-engineer-intern-summer-and-winter/7210115",
+    "locations": [
+      "South San Francisco, CA",
+      "Seattle, WA",
+      "New York, NY"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Stripe",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "d2eeae11-84d7-4a52-af4e-6195d8e9d1e5",
+    "date_posted": 1756869342,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756869559,
+    "url": "https://jobs.plexus.com/careers/job/1099542548960",
+    "locations": [
+      "Neenah, WI"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Plexus",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "6a0e10f2-6cd0-441b-be0d-87529549d6cd",
+    "date_posted": 1756869559,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Fall"
+  },
+  {
+    "date_updated": 1756869565,
+    "url": "https://jobs.plexus.com/careers/job/1099542501274",
+    "locations": [
+      "Neenah, WI"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Plexus",
+    "title": "Automation Controls Engineer Intern",
+    "source": "vanshb03",
+    "id": "2836cd9c-353d-4935-8902-be7d6a5d7b81",
+    "date_posted": 1756869565,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756869571,
+    "url": "https://jobs.plexus.com/careers/job/1099542548181",
+    "locations": [
+      "Neenah, WI"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Plexus",
+    "title": "Engineering Productivity Intern, Software",
+    "source": "vanshb03",
+    "id": "c0461149-86df-4450-ad6b-6d4b96bde07b",
+    "date_posted": 1756869571,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756869684,
+    "url": "https://www.workatastartup.com/jobs/80843",
+    "locations": [
+      "CA",
+      "US",
+      "Remote"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Gale",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "737623b4-4206-47cb-87c3-97adefe5bba8",
+    "date_posted": 1756869684,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Spring"
+  },
+  {
+    "date_updated": 1756871316,
+    "url": "https://www.mathworks.com/company/jobs/opportunities/28174-technical-documentation-intern-undergraduate",
+    "locations": [
+      "Natick, MA"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "MathWorks",
+    "title": "Technical Documentation Intern, Undergraduate",
+    "source": "vanshb03",
+    "id": "7e544a72-1302-4d7f-9e84-ce51aa95e408",
+    "date_posted": 1756871316,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871326,
+    "url": "https://www.mathworks.com/company/jobs/opportunities/25610-multiple-openings-engineering-development-group-internship",
+    "locations": [
+      "Natick, MA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "MathWorks",
+    "title": "Engineering Development Group Intern",
+    "source": "vanshb03",
+    "id": "f7650d30-89e0-4d0e-8e10-2b42a4459580",
+    "date_posted": 1756871326,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871386,
+    "url": "https://dickssportinggoods.wd1.myworkdayjobs.com/en-US/DSG/job/Customer-Support-Center/Software-Engineering---Summer-2026-Corporate-Internship_202508673-1",
+    "locations": [
+      "Pittsburgh, PA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "DICK'S Sporting Goods",
+    "title": "Software Engineer Intern, Corporate",
+    "source": "vanshb03",
+    "id": "cc415574-043b-4e57-baa3-5f4addc4fb0f",
+    "date_posted": 1756871386,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871393,
+    "url": "https://vanguard.wd5.myworkdayjobs.com/en-US/vanguard_external/job/Malvern-PA/College-to-Corporate-Internship---Technology-Operations_170065",
+    "locations": [
+      "Malvern, PA",
+      "Charlotte, NC"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Vanguard",
+    "title": "College to Corporate Intern, Technology Operations",
+    "source": "vanshb03",
+    "id": "c2c527e8-0180-48c3-89bc-73066416a0a5",
+    "date_posted": 1756871393,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871403,
+    "url": "https://jobs.ulalaunch.com/job/Centennial-Software-Engineering-Internship-Summer-2026-CO-80112/1321878500/",
+    "locations": [
+      "Centennial, CO"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "United Launch Alliance",
+    "title": "Software Engineering Intern",
+    "source": "vanshb03",
+    "id": "5ce39307-6814-4f9a-8bdc-a952e69f1cdc",
+    "date_posted": 1756871403,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871519,
+    "url": "https://www.atlassian.com/company/careers/details/20956",
+    "locations": [
+      "San Francisco, CA",
+      "Remote",
+      "Seattle, WA"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Atlassian",
+    "title": "Software Engineer Intern",
+    "source": "vanshb03",
+    "id": "678815d5-5d06-45b6-9213-e9743af5c8fd",
+    "date_posted": 1756871519,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871599,
+    "url": "https://job-boards.greenhouse.io/spacex/jobs/8149124002",
+    "locations": [
+      "Bastrop, TX",
+      "Brownsville, TX",
+      "Cape Canaveral, FL",
+      "Hawthorne, CA",
+      "Irvine, CA",
+      "McGregor, TX",
+      "Redmond, WA",
+      "Vandenberg, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "SpaceX",
+    "title": "Engineering Intern/Co-op",
+    "source": "vanshb03",
+    "id": "6ae22024-1c53-4542-aa07-7153b7411d6d",
+    "date_posted": 1756871599,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871645,
+    "url": "https://job-boards.greenhouse.io/spacex/jobs/8149154002",
+    "locations": [
+      "Bastrop, TX",
+      "Brownsville, TX",
+      "Cape Canaveral, FL",
+      "Hawthorne, CA",
+      "Irvine, CA",
+      "McGregor, TX",
+      "Redmond, WA",
+      "Sunnyvale, CA"
+    ],
+    "sponsorship": "U.S. Citizenship is Required",
+    "active": true,
+    "company_name": "SpaceX",
+    "title": "Software Engineering Intern/Co-op",
+    "source": "vanshb03",
+    "id": "1159b242-f624-4808-97f4-5baca9782af0",
+    "date_posted": 1756871645,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871656,
+    "url": "https://careers.usbank.com/global/en/job/2025-0020194/2026-Engineering-Summer-Intern",
+    "locations": [
+      "Hopkins, MN"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "U.S. Bank",
+    "title": "Engineering Intern",
+    "source": "vanshb03",
+    "id": "14c451ef-3f8c-4da0-bc38-e7ca3c581e9d",
+    "date_posted": 1756871656,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871705,
+    "url": "https://www.atlassian.com/company/careers/details/20963",
+    "locations": [
+      "Seattle, WA",
+      "Remote"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Atlassian",
+    "title": "Data Engineer Intern",
+    "source": "vanshb03",
+    "id": "f9a39c87-7adf-4fb5-8655-e5ab7ef2f613",
+    "date_posted": 1756871705,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871711,
+    "url": "https://www.atlassian.com/company/careers/details/20962",
+    "locations": [
+      "Seattle, WA",
+      "Remote"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Atlassian",
+    "title": "Data Science Intern",
+    "source": "vanshb03",
+    "id": "c76d3d4c-9d26-4348-bb9d-68841357613f",
+    "date_posted": 1756871711,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871947,
+    "url": "https://careers.roblox.com/jobs/7167364",
+    "locations": [
+      "San Mateo, CA"
+    ],
+    "sponsorship": "Does Not Offer Sponsorship",
+    "active": true,
+    "company_name": "Roblox",
+    "title": "Product Design Intern",
+    "source": "vanshb03",
+    "id": "98325593-a2ae-498f-8344-3360f13f028d",
+    "date_posted": 1756871947,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756871957,
+    "url": "https://careers.roblox.com/jobs/7167598",
+    "locations": [
+      "San Mateo, CA"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Roblox",
+    "title": "Product Management Intern",
+    "source": "vanshb03",
+    "id": "6829ff1a-0cb9-46b9-b391-2d274c638208",
+    "date_posted": 1756871957,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
+  },
+  {
+    "date_updated": 1756921521,
+    "url": "https://www.workatastartup.com/jobs/80989",
+    "locations": [
+      "San Francisco, CA",
+      "Remote"
+    ],
+    "sponsorship": "Other",
+    "active": true,
+    "company_name": "Cloudglue - YC",
+    "title": "Full-Stack AI Engineer Intern",
+    "source": "vanshb03",
+    "id": "56f6b98f-609c-444e-b873-9674909de48a",
+    "date_posted": 1756921521,
+    "company_url": "",
+    "is_visible": true,
+    "season": "Summer"
   }
 ]
