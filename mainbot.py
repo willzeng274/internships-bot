@@ -742,14 +742,11 @@ async def process_repo_updates(new_data, old_data, previous_data_file, repo_url,
             bot_logger.debug(f"Skipping duplicate URL: {role_url}")
         else:
             bot_logger.debug(f"Role missing URL, skipping cache check: {role.get('company_name', 'Unknown')} - {role.get('title', 'Unknown')}")
-
-    # Deactivation messages disabled - too noisy
     # for role in deactivated_roles:
     #     channel_configs = await get_all_channels_from_db()
     #     for guild_id, channel_id in channel_configs:
     #         if f"{guild_id}:{channel_id}" not in failed_channels:
     #             loop.create_task(edit_or_send_message(role, guild_id, channel_id, guild_ping_roles, is_deactivation=True))
-
     if is_second_repo:
         for role in reactivated_roles:
             role_url = role.get('url', '')
